@@ -1,0 +1,104 @@
+@import 'src/styles/variables.scss';
+
+.header {
+    position: sticky;
+    z-index: 10;
+    top: -1px;
+    height: 80px;
+    background: #FFF;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 118px;
+    padding-top: 10px;
+    padding-right: 118px;
+    padding-bottom: 10px;
+    justify-content: left;
+}
+
+.logo {
+    position: relative;
+    width: 61px;
+    height: 60px;
+    transition: 0.2s ease-in-out;
+}
+
+.person {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 34px;
+    transition: 0.2s ease-in-out;
+}
+
+
+.tryButton {
+    
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px 0;
+  width: 268px;
+  height: 40px;
+  background: $btn-color;
+  border-radius: 10px;
+  color: $white-color;
+  font-family: $font-monsterrat;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  vertical-align:text-bottom;
+  border-style:hidden;
+  outline:none;
+  align-items:center;
+  position:relative;
+}
+
+.frame3
+{
+    
+   
+    align-items:center;
+    gap:10px;
+    position:relative;
+}
+
+
+
+.nav {
+    overflow: auto;
+
+    &List {
+        display: flex;
+        justify-content: space-between;
+        width: 296px;
+        height: 60px;
+        align-items: center;
+        margin-left: 34px;
+        margin-right: 951px;
+
+        &Item {
+            margin: 0, 0, 76px, 0;
+
+            &>a {
+                color: $black-color;
+                font-family: $font-monsterrat;
+                font-size: 32px;
+                font-style: bold;
+                font-weight: 900;
+                letter-spacing: 1px;
+                line-height: normal;
+                transition: $transition;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+    
+}
+    
