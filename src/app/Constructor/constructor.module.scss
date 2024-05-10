@@ -1,0 +1,312 @@
+@import 'src/styles/variables.scss';
+
+.construct {
+  position: absolute;
+  background: $black-color;
+  height: 200%;
+  padding-left: 250px;
+  padding-top: 120px;
+  padding-right: 250px;
+}
+
+.text {
+  display: grid;
+  min-height:  136px;
+  max-width: 850px;
+  gap:3px;
+  position:relative;
+  margin-bottom: 24px;
+}
+
+.title {
+  line-height: 68px;
+  font-weight: 700;
+  font-size: 42px;
+  color: $white-color;
+  font-family: $font-monsterrat;
+  margin-bottom: 4px;
+}
+
+.description {
+  line-height: 28px;
+  width: 100%;
+  color: $white-color;
+  font-weight: 500;
+  font-family: $font-monsterrat;
+  font-size: 25px;
+  color: $white-color;
+}
+
+.input_space {
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 48px;
+  width: calc(100vw - 500px);
+  height: 473px;
+  background: $desc-color;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: $font-monsterrat;
+  font-size: 20px;
+  position: relative;
+}
+
+.input_field { 
+  background-color: $desc-color;
+  border-style:hidden;
+  width: 100%;  
+  height: 100%;  
+  resize: none;
+  border-color: none;
+}
+.input_field:focus {
+  box-shadow: 0 0 5px $desc-color;
+  border-color: none;
+}
+
+.character_count { 
+  position: absolute;
+  bottom: 24px; 
+  right: 24px; 
+}
+
+.buttons {
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  row-gap: 484px;  
+}
+
+.Button1 {
+  left: 250px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px 0;
+  width: 348px;
+  height: 75px;
+  background: none;
+  border-radius: 10px;
+  border-color:  $btn-color;
+  border-width: 2px;
+  color: $white-color;
+  font-family: $font-monsterrat;
+  font-size: 31px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  vertical-align:text-bottom;
+  outline:none;
+  align-items:center;
+}
+
+.Button2 {
+  display: flex;
+  
+  justify-content: center;
+  padding: 3px 0;
+  width: 348px;
+  height: 75px;
+  background: $btn-color;
+  border-radius: 10px;
+  color: $white-color;
+  font-family: $font-monsterrat;
+  font-size: 31px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  vertical-align:text-bottom;
+  border-style:hidden;
+  outline:none;
+  align-items:center;
+}
+
+.voices{
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 22px;
+  padding-right: 30px;
+  width: 348px;
+  height: 282px;
+  background-color: $btn-color;
+  border-style:hidden;
+  border-radius: 10px;
+}
+
+.voice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 126px;
+  height: 30px;
+  margin-top: 16px;
+  align-items: center;
+
+}
+
+.iconwoman{
+  margin-right: 34px;
+  position: relative;
+  width: 30px;
+  height: 36px;
+  transition: 0.2s ease-in-out;
+}
+
+.iconman{
+  margin-right: 28px;
+  position: relative;
+  width: 35px;
+  height: 36px;
+  transition: 0.2s ease-in-out;
+}
+
+.name {
+  width: 126px;
+  height: 30px;
+  color: $black-color;
+  font-weight: 700;
+  font-family: $font-monsterrat;
+  font-size: 19px;
+}
+
+.wrapperleft{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  gap: 0px;
+  width: 348px;
+  height: 384px;
+  align-content: flex-start
+}
+
+.wrapperright{
+  text-align: right;
+  display: grid;
+  grid-gap: 30px;
+  max-width: 588px;
+  max-height: 158px;
+  justify-items: end;
+}
+
+.gentext{
+  line-height: 26px;
+  width: 100%;
+  color: $white-color;
+  font-weight: 500;
+  font-family: $font-monsterrat;
+  font-size: 24px;
+  color: $white-color;
+  text-align: right;
+  margin-bottom: 24px;
+}
+.audioserch
+{
+  width: 100%;
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  row-gap: 135px;  
+}
+
+.searchbar {
+  display: flex;
+  width: 374px;
+  text-align: right;
+  justify-content: space-between;
+}
+
+.searchfield {
+  width: 325px;
+  height: 53px;
+  padding: 0.5rem;
+  border: 2px solid $hover-color;
+  border-radius: 10px;
+  background-color: $black-color;
+  outline: none;
+  color: $white-color;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.searchbutton {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 33px;
+  height: 33px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Состояние фокуса для поля ввода */
+.searchfield:focus {
+  box-shadow: 0 0 5px $desc-color;
+}
+
+/* Состояние наведения для кнопки поиска */
+.searchbutton:hover {
+  box-shadow: 0 0 5px $desc-color;
+}
+
+.gentext2{
+  line-height: 26px;
+  color: $white-color;
+  font-weight: 500;
+  font-family: $font-monsterrat;
+  font-size: 24px;
+  color: $white-color;
+  text-align: left;
+}
+
+.gentext3{
+  line-height: 26px;
+  font-weight: 400;
+  font-family: $font-monsterrat;
+  font-size: 20px;
+  color: $white-color;
+  text-align: left;
+}
+
+.bootmtext{
+  padding-bottom: 12px;
+  padding-top: 12px;
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // gap: 23px;
+  border-bottom: 2px solid  $hover-color;
+  text-align: center;
+}
+
+.iconsgen{
+  position: relative;
+  height: 27px;
+  width: 27px;
+}
+
+.iconstogether{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 55px;
+}
+
+.bootmtext2{
+  padding-top: 12px;
+  // width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
+
+.wrappertop{
+  padding-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 200px;
+}
