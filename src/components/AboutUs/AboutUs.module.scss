@@ -1,0 +1,218 @@
+@import 'src/styles/variables.scss';
+
+.about {
+    position: sticky;
+    height: 2481px;
+    z-index: 10;
+    background: $black-color;
+    margin-top: 0;
+    align-items: center;
+    
+}
+.wrapper {
+    align-items: center;
+    padding-left: 230px;
+    padding-right: 230px;
+    justify-content: center;
+    position: sticky;
+}
+.wrapper1{
+    height:1000px;
+    width:1534px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:115px;
+    padding-top: 212px;
+    padding-left: 35px;
+    position: sticky;
+}
+.about_block {
+    height:333px;
+    width:599px;
+    padding:0px;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    position:relative;
+}
+
+.textbig {
+    color: $white-color;
+    text-align:left;
+    vertical-align:text-top;
+    font-size: 60px;
+    font-family: $font-monsterrat;
+    font-size: bold;
+    border-style:hidden;
+    outline:none;
+    width:468px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.textsmall{
+    color: $white-color;
+    text-align:left;
+    vertical-align:text-top;
+    font-size:46px;
+    font-family: $font-monsterrat;
+    font-style: medium;
+    line-height:70px;
+    border-style:hidden;
+    outline:none;
+    width:599px;
+}
+
+.tryButton {
+    display:flex;
+    flex-direction: row;
+    background-color: $btn-color;
+    height:76px;
+    width:433px;
+    border-radius:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    gap:10;
+    color: $white-color;
+    font-family: $font-monsterrat;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.image{
+    left:714px;
+    top:30px;
+    position: sticky;
+    width:820px;
+    height:795px;
+}
+
+.wrapper2{
+
+    height:201px;
+    width:1460px;
+    padding:0px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:175px;
+    position:relative;
+    margin-left: 0;
+    margin-top: 168px;
+}
+
+.textblue {
+    color: $blue-color;
+    text-align:left;
+    vertical-align:text-bottom;
+    font-size:60px;
+    font-family:$font-monsterrat;
+    font-style: bold;
+    font-weight: 700;
+    line-height:70px;
+    border-style:hidden;
+    outline:none;
+    width:476px;
+}
+
+.descsmall {
+    color: $white-color;
+    text-align:left;
+    vertical-align:text-bottom;
+    font-size:40px;
+    font-family: $font-monsterrat;
+    line-height:49px;
+    border-style:hidden;
+    outline:none;
+    width:809px;
+}
+
+.textBox {
+    margin-left:0px;
+    padding-right: 450px;
+    margin-bottom: 104px;
+    margin-top: 268px;
+    width:1460px;
+    height: 130px;
+}
+
+.textcreate {
+    width:987px;
+    color: $white-color;
+    text-align:left;
+    vertical-align:text-bottom;
+    font-size:47px;
+    font-family: $font-monsterrat;
+    font-weight: 700;
+    word-wrap: break-word;
+    line-height:65px;
+    border-style:hidden;
+    outline:none;
+}
+.audioWrapper{
+    display:flex;
+    margin-left: 0;
+    margin-bottom: 156px;
+    width: 1460px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.audioList{
+    height:54px;
+    width:1460px;
+    padding:0px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap:124px;
+    position:relative;
+}
+
+.audio {
+    border: none;
+    box-shadow: none;
+}
+.customAudio {
+    width: 404px;
+    
+        &::-webkit-media-controls-panel {
+            background-color: $blue-color;
+            border-style: none;
+            border-color: $blue-color;
+            box-shadow: none;
+        }
+
+        &::-webkit-media-controls-play-button{
+            color: $blue-color;
+            background-color: $white-color;
+            border-radius: 50%;
+        }
+        &::-webkit-media-controls-current-time-display{
+            color: $white-color;
+            font-size: 15px;
+        }
+        &::-webkit-media-controls-time-remaining-display{
+            color: $white-color;
+            font-size: 15px;
+        }
+
+        &::-webkit-media-controls-mute-button{
+            background-color: $white-color;
+            border-radius: 50%;
+        }
+
+  }

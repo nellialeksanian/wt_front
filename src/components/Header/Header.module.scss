@@ -57,38 +57,28 @@
   position:relative;
 }
 
-.frame3
-{
-    
-   
-    align-items:center;
-    gap:10px;
-    position:relative;
-}
-
-
 
 .nav {
-    overflow: auto;
+    overflow: hidden;
 
     &List {
         display: flex;
-        justify-content: space-between;
-        width: 296px;
+        justify-content: left;
+        gap:34px;
+        width: 396px;
         height: 60px;
         align-items: center;
         margin-left: 34px;
         margin-right: 951px;
 
         &Item {
-            margin: 0, 0, 76px, 0;
 
             &>a {
                 color: $black-color;
                 font-family: $font-monsterrat;
                 font-size: 32px;
                 font-style: bold;
-                font-weight: 900;
+                font-weight: 700;
                 letter-spacing: 1px;
                 line-height: normal;
                 transition: $transition;
@@ -102,3 +92,108 @@
     
 }
     
+
+@media (max-width: 1738px) { 
+    .tryButton{
+       font-size: 16px;
+    }
+
+    .nav {
+        &List {
+            margin-right: 681px;
+            &Item {
+                 &>a{
+                     font-size: 25px;
+                    }
+                }
+            }
+    }
+   
+}
+
+@media (max-width: 1400px) { 
+    .tryButton{
+       font-size: 15px;
+    }
+   
+}
+@media (max-width: 1200px) { 
+    .tryButton{
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 992px) { 
+    .nav {
+        &List {
+            justify-content: left;
+            gap: 25px;
+            margin-right: 440px;
+            &Item {
+                margin: 0, 0, 5px, 0;
+                &>a{
+                    font-size: 20px;
+                    width:50px;
+                }
+            }   
+        }
+    }
+    .tryButton {
+        font-size: 11px;
+        width: 280px;
+    }   
+}
+
+@media (max-width: 837px) { 
+    .header{
+        height: 57px;
+    }
+    .wrapper {
+        align-items: center;
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        
+    }
+    .logo {
+        width: 30px;
+        height: 33px; 
+    }
+    .person {
+        width: 14px;
+        height: 14px;
+        margin-right: 9px;
+    }
+    .tryButton{
+        font-size:10px;
+        font-weight: 700;
+        line-height:70px;
+        height: 20px;
+        width: 129px;
+        border-radius: 5px;
+    }
+
+    .nav {
+        &List {
+            height:27px;
+            width:171px;
+            gap:17px;
+            margin-left: 29px;
+            margin-right: 267px;
+    
+            &Item {
+                margin: 0, 0, 17px, 0;
+                &>a{
+                    font-size: 15px;
+                    width:59px;
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 576px) { 
+
+}
