@@ -12,7 +12,11 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Чтец",
+<<<<<<< HEAD
   description: "Проект1",
+=======
+  description: "Генерируй аудио с помощью ИИ",
+>>>>>>> b818ecb825a041db46af4b64f9fba15f69fdb060
 };
 
 export default function RootLayout({
