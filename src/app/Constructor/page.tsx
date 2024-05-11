@@ -1,10 +1,15 @@
+"use client";
+
+import React, {useState} from 'react';
 import styles from './constructor.module.scss';
 import Link from 'next/link';
 import Image from 'next/image'
 
-export default function Constructor() {
+function Constructor() {
+  const [isOpen, setOpen] = useState(false)
+
   return (
-    <main className={styles.construct}>
+    <main className={styles.constructor}>
       <nav className={styles.text}>
         <div className={styles.title}>
           Преобразовать текст в аудиозапись
@@ -19,41 +24,39 @@ export default function Constructor() {
       </div>
       <div className={styles.buttons}>
         <div className={styles.wrapperleft}>
-          <button className={styles.Button1}>
-            <Link href = "#">Голоса</Link>
-          </button>
-          <div className={styles.voices}>
+          <button className={styles.Button1} onClick={() => setOpen(!isOpen)}>Голоса</button>
+          <nav className={`${styles.menu} ${isOpen ? styles.active : ""}`}>
             <div className={styles.voice}>
-              <Link href="/" className={styles.iconwoman}>
+              <Link href="#" className={styles.iconwoman}>
                 <Image fill src="assets/icons/woman.svg" alt="icon" />
               </Link>
               <div className={styles.name}>Alena</div>
             </div>
             <div className={styles.voice}>
-              <Link href="/" className={styles.iconman}>
+              <Link href="#" className={styles.iconman}>
                 <Image fill src="assets/icons/man.svg" alt="icon" />
               </Link>
               <div className={styles.name}>Maxim</div>
             </div>
             <div className={styles.voice}>
-              <Link href="/" className={styles.iconman}>
+              <Link href="#" className={styles.iconman}>
                 <Image fill src="assets/icons/man.svg" alt="icon" />
               </Link>
               <div className={styles.name}>Iliya</div>
             </div>
             <div className={styles.voice}>
-              <Link href="/" className={styles.iconwoman}>
+              <Link href="#" className={styles.iconwoman}>
                 <Image fill src="assets/icons/woman.svg" alt="icon" />
               </Link>
               <div className={styles.name}>Tatiana</div>
             </div>
             <div className={styles.voice}>
-              <Link href="/" className={styles.iconman}>
+              <Link href="#" className={styles.iconman}>
                 <Image fill src="assets/icons/man.svg" alt="icon" />
               </Link>
               <div className={styles.name}>Vova</div>
             </div>
-          </div>
+          </nav>
         </div>
         <div className={styles.wrapperright}>
           <button className={styles.Button2}>
@@ -71,32 +74,39 @@ export default function Constructor() {
           </Link>
         </div>
       </div>
-      <div className={styles.bootmtext}>
-        <div className={styles.gentext2}>Дата</div>
-        <div className={styles.gentext2}>Название</div>
-        <div className={styles.gentext2}>Извлечено</div>
-        <div className={styles.gentext2}>Тайминг</div>
-        <div className={styles.gentext2}>Взаимодействие</div>
-      </div>
       <div className={styles.wrappertop}>
-        <div className={styles.bootmtext2}>
-          <div className={styles.gentext3}>10.05.24</div>
-          <div className={styles.gentext3}>BestAudioEver</div>
-          <div className={styles.gentext3}>10.05.24</div>
+      <div className={styles.blueline}></div>
+        <div className={styles.bootmtext}>
+          <div className={styles.bootmtext2}>
+            <div className={styles.text2}>Дата</div>
+            <div className={styles.text3}>10.05.24</div>
           </div>
-          <div className={styles.gentext3}>00.07</div>
-        <div className={styles.iconstogether}>
-          <Link href="#" className={styles.iconsgen}>
-            <Image fill src="assets/icons/play.svg" alt="icon" />
-          </Link>
-          <Link href="#" className={styles.iconsgen}>
-            <Image fill src="assets/icons/cloud.svg" alt="icon" />
-          </Link>
-          <Link href="#" className={styles.iconsgen}>
-            <Image fill src="assets/icons/trash.svg" alt="icon" />
-          </Link>
-        </div>
-        </div>
+          <div className={styles.bootmtext2}>
+            <div className={styles.text2}>Название</div>
+            <div className={styles.text3}>BestAudioEver</div>
+          </div>
+          <div className={styles.bootmtext2}>
+            <div className={styles.text2}>Взаимодействие</div>
+            <div className={styles.text3}>10.05.24</div>
+          </div>
+          <div className={styles.bootmtext2}>
+            <div className={styles.text2}>Продолжительность</div>
+            <div className={styles.text3}>00.07</div>
+          </div>
+          <div className={styles.iconstogether}>
+            <Link href="#" className={styles.iconsgen}>
+              <Image fill src="assets/icons/play.svg" alt="icon" />
+            </Link>
+            <Link href="#" className={styles.iconsgen}>
+              <Image fill src="assets/icons/cloud.svg" alt="icon" />
+            </Link>
+            <Link href="#" className={styles.iconsgen}>
+              <Image fill src="assets/icons/trash.svg" alt="icon" />
+            </Link>
+            </div>
+          </div>
+      </div>
     </main>
   );
 }
+export default Constructor;
