@@ -5,12 +5,12 @@ import styles from './AboutUs.module.scss';
 function AboutUs() {
     return (
     <div className={`container ${styles.wrapper}`}>
-        <div className={styles.block_1}> 
+        <div id="AboutUs" className={styles.block_1}> 
             <div className={styles.about_block}>
                 <span className = {styles.textbig}>Чтец</span>
                 <span className = {styles.textsmall}>Генерация аудиофайлов с помощью ИИ</span>
                 <button className={styles.tryButton}>
-                  <Link href = '#'>Попробовать бесплатно</Link>
+                  <Link href = '/Constructor'>Попробовать бесплатно</Link>
                 </button>
             </div>
             <div className={styles.image}>
@@ -21,7 +21,7 @@ function AboutUs() {
             <span className={styles.textblue}>Текст в аудио в один клик!</span>
             <span className={styles.descsmall}>Генерируйте аудиофайлы из ваших текстов, используя разлчиные голоса и добавляя  аудиоэффекты </span>
         </div>
-        <div className={styles.textBox}>
+        <div id="AIvoice" className={styles.textBox}>
             <span className={styles.textcreate}>Создайте свою аудиозапись, используя Искусственный Интеллект</span>
         </div>
         <div className={styles.audio_block}>
