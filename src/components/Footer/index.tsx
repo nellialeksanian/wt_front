@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href="#">Голос ИИ</Link>
           </div>
         </div>
-        <div className={styles.text}>Все права защищены</div>
+        <div className={styles.text1}>Все права защищены</div>
       </div>
     </footer>
   );

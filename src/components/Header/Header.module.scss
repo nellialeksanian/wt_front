@@ -169,7 +169,6 @@
     .tryButton{
         font-size:10px;
         font-weight: 700;
-        line-height:70px;
         height: 20px;
         width: 129px;
         border-radius: 5px;
@@ -194,6 +193,21 @@
     }
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 676px) { 
+    .tryButton{
+        font-size:8px;
+        
+    }
+}
 
+@media (max-width: 576px) { 
+    .person {
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+    .tryButton {
+        display: none;
+    }
 }

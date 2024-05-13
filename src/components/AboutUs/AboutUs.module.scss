@@ -1,41 +1,39 @@
 @import 'src/styles/variables.scss';
 
-.about {
-    position: sticky;
-    height: 2481px;
-    z-index: 10;
-    background: $black-color;
-    margin-top: 0;
-    align-items: center;
-    
-}
+
 .wrapper {
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     padding-left: 230px;
     padding-right: 230px;
+    padding-bottom: 100px;
     justify-content: center;
-    position: sticky;
+    background-color: $black-color;
+    overflow-wrap: break-word;
+    width: 100%;
 }
-.wrapper1{
-    height:1000px;
-    width:1534px;
+.block_1 {
+    height:auto;
+    width: auto;
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
     gap:115px;
-    padding-top: 212px;
-    padding-left: 35px;
-    position: sticky;
+    padding-top: 120px;
+    padding-left: 70px;
 }
 .about_block {
-    height:333px;
-    width:599px;
+    height:auto;
+    width:auto;
     padding:0px;
     display:flex;
     flex-direction:column;
     gap:26px;
-    position:relative;
+    
 }
 
 .textbig {
@@ -79,7 +77,6 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    position:relative;
     gap:10;
     color: $white-color;
     font-family: $font-monsterrat;
@@ -89,14 +86,14 @@
 }
 
 .image{
-    left:714px;
-    top:30px;
-    position: sticky;
+    display: flex;
+    align-items: center;
+    position: relative;
     width:820px;
     height:795px;
 }
 
-.wrapper2{
+.block_2{
 
     height:201px;
     width:1460px;
@@ -106,7 +103,6 @@
     justify-content:center;
     align-items:center;
     gap:175px;
-    position:relative;
     margin-left: 0;
     margin-top: 168px;
 }
@@ -135,6 +131,7 @@
     border-style:hidden;
     outline:none;
     width:809px;
+    
 }
 
 .textBox {
@@ -144,6 +141,7 @@
     margin-top: 268px;
     width:1460px;
     height: 130px;
+    flex-wrap: wrap;
 }
 
 .textcreate {
@@ -159,6 +157,10 @@
     border-style:hidden;
     outline:none;
 }
+.audio_block{
+    display: flex;
+    flex-direction: column;
+}
 .audioWrapper{
     display:flex;
     margin-left: 0;
@@ -167,7 +169,7 @@
     height: 110px;
     align-items: center;
     justify-content: center;
-    overflow: auto;
+    flex-wrap: wrap;
 }
 
 .audioList{
@@ -179,7 +181,6 @@
     justify-content:flex-start;
     align-items:flex-start;
     gap:124px;
-    position:relative;
 }
 
 .audio {
@@ -216,3 +217,366 @@
         }
 
   }
+
+.like_comment_list{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 470px;
+    justify-content: left;
+}
+
+.like_comment{
+    display: flex;
+    flex-direction: row;
+    gap:13px;
+    align-items: left;
+    padding-left: 10px;
+}
+.like {
+    position: relative;
+    height: 22px;
+    width: 21px;
+    &:hover {
+        color: $hover-color;
+    }
+}
+.comment{
+    position: relative;
+    height: 22px;
+    width: 21px;
+}
+
+
+
+@media (max-width: 1490px) { 
+    .block_1{
+        gap: 190px;
+        padding-left: 50px;
+    }
+    .textbig{
+        font-size: 40px;
+        width: auto;
+    }
+    .textsmall{
+        line-height: 40px;
+        font-size: 26px;
+        width: 340px;
+    }
+    .tryButton{
+        font-size: 20px;
+        height: 56px;
+        width: 323px;
+    }
+
+    .image {
+        width: 550px;
+        height: 635px;
+    } 
+
+    .block_2 {
+        width: 1020px;
+        gap: 140px;
+        margin-top: 50px;
+    }
+
+    .textblue{
+        line-height: 40px;
+        width: 500px;
+        font-size: 40px;
+    }
+    .descsmall{
+        line-height: 45px;
+        font-size: 27px;
+    }
+
+    .textBox{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 1020px;
+        padding-right: 270px;
+    }
+    .textcreate {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .audioWrapper{
+        width: 1020px;
+    }
+    .audioList{
+        gap: 50px;
+        width: 1020px;
+    }
+    .audio {
+        width:306px
+    }
+    
+    .like_comment_list{
+        gap:29%;
+    }
+
+}
+
+@media (max-width: 1089px) { 
+
+    .wrapper{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    .block_1{
+        gap: 75px;
+        padding-left: 50px;
+        padding-top: 120px;
+    }
+    .textbig{
+        font-size: 30px;
+        width: auto;
+    }
+    .textsmall{
+        line-height: 20px;
+        font-size: 18px;
+        width: 315px;
+    }
+    .tryButton{
+        font-size: 16px;
+        height: 46px;
+        width: 255px;
+    }
+
+    .image {
+        width: 450px;
+        height: 535px;
+    } 
+
+    .block_2 {
+        width: 788px;
+        gap: 120px;
+        margin-top: 30px;
+    }
+
+    .textblue{
+        line-height: 40px;
+        width: 500px;
+        font-size: 30px;
+    }
+    .descsmall{
+        line-height: 45px;
+        font-size: 25px;
+    }
+
+    .textBox{
+        margin-top: 158px;
+        width: 788px;
+        padding-right: 150px;
+    }
+    .textcreate {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .audioWrapper{
+        width: 788px;
+    }
+    .audioList{
+        gap: 10px;
+        width: 788px;
+    }
+    
+    .like_comment_list{
+        gap:26%;
+    }
+}
+
+@media (max-width: 810px){
+    .block_1{
+        gap: 40px;
+        padding-left: 30px;
+        padding-top: 120px;
+    }
+    .textbig{
+        font-size: 20px;
+        width: auto;
+    }
+    .textsmall{
+        line-height: 20px;
+        font-size: 13px;
+        width: 170px;
+    }
+    .tryButton{
+        font-size: 12px;
+        height: 35px;
+        width: 200px;
+    }
+
+    .image {
+        width: 350px;
+        height: 435px;
+    } 
+
+    .block_2 {
+        width: 577px;
+        gap: 85px;
+        margin-top: 30px;
+    }
+
+    .textblue{
+        line-height: 40px;
+        width: 500px;
+        font-size: 20px;
+    }
+    .descsmall{
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    .textBox{
+        margin-top: 120px;
+        width: 577px;
+        padding-right: 150px;
+    }
+    .textcreate {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .audio_block{
+        flex-direction: row;
+        width: 577px;
+        gap:20px;
+
+    }
+    .audioList{
+        gap: 10px;
+        width: 577px;
+        padding-left: 0px;
+    }
+    
+    .like_comment_list{
+        gap:26%;
+    }
+
+    .audioWrapper{
+        margin-bottom: 50px;
+        width: 546px;
+        align-items: center;
+        height: auto;
+        flex-direction: row;
+    }
+    .audioList{
+        gap: 50px;
+        flex-direction: column;
+        width: 200px;
+        height: auto;
+        align-items: center;
+    }
+    .customAudio{
+        width:200px;
+    }
+    .like_comment_list{
+        gap: 84px;
+        width: auto;
+        flex-direction: column;
+    }
+    .like_comment {
+        width: auto;
+    }
+
+
+}
+    
+
+
+@media (max-width: 576px) {
+    .wrapper{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .block_1 {
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding-left: 0;
+        margin-bottom: 100px;
+    }
+    .about_block{
+        justify-content: center;
+        align-items: center;
+    }
+    .textsmall{
+        text-align: center;
+        width: auto;
+    }
+    .textbig {
+        width: auto;
+        font-size: 40px;
+    }
+    .tryButton{
+        width: auto;
+    }
+    .block_2 {
+        flex-direction: column;
+        width: 376px;
+        align-items: left;
+        justify-content: left;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    .textblue {
+        width:320px;
+        margin-right: 40px;
+    }
+    .descsmall{
+        width: 376px;
+        font-size: 22px;
+    }
+
+    .textBox{
+        width: 376px;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .textcreate{
+        font-size: 22px;
+        line-height: 40px;
+        width: 376px;
+        align-items: center;
+    }
+
+    .audio_block{
+        flex-direction: column;
+        width: auto;
+        gap:0px;
+
+    }
+
+    .audioWrapper{
+        margin-bottom: 50px;
+        width: 546px;
+        align-items: center;
+        height: auto;
+        flex-direction: row;
+    }
+    .audioList{
+        gap: 50px;
+        flex-direction: column;
+        width: 305px;
+        height: auto;
+        align-items: center;
+    }
+    .customAudio{
+        width:305px
+    }
+    .like_comment_list{
+        gap: 84px;
+        width: auto;
+        flex-direction: column;
+    }
+    .like_comment {
+        width: auto;
+    }
+    .image{
+        width:410px;
+        height:450px;
+    }
+ }
+
+  

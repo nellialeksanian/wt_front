@@ -22,6 +22,9 @@ function Header() {
         <Link href="/" className={styles.person}>
           <Image fill src="/assets/icons/person.svg" alt="person" />
         </Link>
+        <Link href="/" className={styles.menu}>
+          <Image fill src="/assets/icons/person.svg" alt="person" />
+        </Link>
         <button className={styles.tryButton}>
           <Link href = '#'>Попробовать сейчас</Link>
         </button>
