@@ -26,7 +26,7 @@ function Header() {
           <Image fill src="/assets/icons/person.svg" alt="person" />
         </Link>
         <button className={styles.tryButton}>
-          <Link href = '#'>Попробовать сейчас</Link>
+          <Link href = "/Constructor">Попробовать сейчас</Link>
         </button>
         
     
