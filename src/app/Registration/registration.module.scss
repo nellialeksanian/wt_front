@@ -1,0 +1,228 @@
+@import 'src/styles/variables.scss';
+
+.registration {
+  position: sticky;
+  display: flex;
+  height: 1080px;
+  margin-top: 0;
+  background-color: $black-color;
+  padding-left: 200px;
+  padding-top: 187px;
+  padding-right: 207px;
+  
+}
+
+.picture{
+    width: 658px;
+    height: 705px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    display: flex;
+    gap: 112px;
+    width: 1513px;
+    height: 848px;
+}
+
+.wrapperleft{
+    display: grid;
+    height: 705px;
+    width: 743px;
+    gap: 12px;
+}
+
+.enterspace{
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    align-items: center;
+}
+
+.title{
+    font-family: $font-monsterrat;
+    font-size: 43px;
+    line-height: 70px;
+    font-weight: 700;
+    color: $white-color;
+    width: 604px;
+    height: 60px;
+}
+.description{
+    font-family: $font-monsterrat;
+    font-size: 30px;
+    line-height: 70px;
+    font-weight: 500;
+    color: $white-color;
+    width: 410px;
+    height: 60px;
+}
+.googlebutton{
+    display: flex;
+    justify-content: center;
+    width: 743px;
+    height: 65px;
+    background: $white-color;
+    border-radius: 10px;
+    color: $white-color;
+    align-items:center;
+    border-style:hidden;
+    outline:none;
+    background-image: url('/assets/icons/google.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.textlogo{
+    height: 196px;
+    display: grid;
+    gap:4px;
+
+}
+
+.enterbutton{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 369px;
+    height: 75px;
+    background: $btn-color;
+    border-radius: 10px;
+    color: $white-color;
+    font-family: $font-monsterrat;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    vertical-align:text-bottom;
+    border-style:hidden;
+    outline:none;
+    align-items:center;
+    cursor: pointer;
+}
+
+.login{
+    width: 743px;
+    height: 65px;
+    padding: 1rem;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: $white-color;
+    outline: none;
+    font-family: $font-monsterrat;
+    color: $black-color;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.passwordContainer { 
+  position: relative;
+  display: flex;
+  align-items: center; 
+}
+
+.label {
+    position: absolute;
+    right: 1.5rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+  
+.blocktext{
+    display: grid;
+    gap: 30px;
+}
+
+.text{
+    font-family: $font-monsterrat;
+    color: $white-color;
+    font-size: 25px;
+    font-weight: 500;
+    height: 41px;
+}
+.bluetext{
+    font-family: $font-monsterrat;
+    color: $btn-color;
+    font-size: 25px;
+    font-weight: 500;
+    height: 41px;
+}
+
+.textbotton{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.agriment{
+    font-family: $font-monsterrat;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.block{
+    display: grid;
+    gap: 44px;
+}
+
+.botton{
+    display: grid;
+    gap: 18px;
+}
+
+.successModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black-color, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background-color: $black-color;
+    width: 736px;
+    height: 294px;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: $font-monsterrat;
+    font-size: 36px;
+    font-weight: 600;
+    color: $white-color;
+    display: grid;
+    gap: 51px;
+    justify-items: center;
+    box-shadow: 0px 10px 25px rgba($black-color, 0.68);
+  }
+  
+  .modalButton {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 75px;
+    background: $btn-color;
+    border-radius: 10px;
+    color: $white-color;
+    font-family: $font-monsterrat;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    vertical-align:text-bottom;
+    outline:none;
+    align-items:center;
+    cursor: pointer;
+  }

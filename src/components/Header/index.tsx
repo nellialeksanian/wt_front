@@ -19,7 +19,7 @@ function Header() {
               </div>
           </div>
         </nav>
-        <Link href="/" className={styles.person}>
+        <Link href="/Enter" className={styles.person}>
           <Image fill src="/assets/icons/person.svg" alt="person" />
         </Link>
         <button className={styles.tryButton}>
