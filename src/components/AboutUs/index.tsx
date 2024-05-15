@@ -17,7 +17,7 @@ function AboutUs() {
                 <Image fill src="/assets/images/mic-sound.svg" alt="mic" /> 
             </div> 
         </div>
-        <div className={styles.block_2}>
+        <div id ="AboutUs2" className={styles.block_2}>
             <span className={styles.textblue}>Текст в аудио в один клик!</span>
             <span className={styles.descsmall}>Генерируйте аудиофайлы из ваших текстов, используя разлчиные голоса и добавляя  аудиоэффекты </span>
         </div>

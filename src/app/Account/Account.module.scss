@@ -1,0 +1,395 @@
+@import 'src/styles/variables.scss';
+
+.account {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background: $black-color;
+    margin-top: 0;
+    background-color: $black-color;
+    padding-left: 181px;
+    padding-right: 181px;
+    padding-top: 91px;
+    gap: 90px;
+}
+.container {
+    height: auto;
+    display: block;
+    width: auto;
+    position: relative;
+}
+.text1 {
+    color: $white-color;
+    text-align:left;
+    font-size:43px;
+    font-family: $font-monsterrat;
+    line-height:70px;
+    border-style:hidden;
+    outline:none;
+    width:auto;
+    font-weight: 700;
+}
+
+
+
+.image{
+    position:relative;
+    height:690px;
+    width:640px;
+}
+
+.solid {
+    border-top: 3px solid $blue-color;
+    margin-bottom: 74px;
+    margin-top: 7px;
+    width: auto;
+}
+
+
+.content {
+    display: none;
+}
+
+
+.activeContent {
+    display: block;
+    position: relative;
+}
+.tabBlock{
+    display: flex;
+    flex-direction: row;
+    gap: 51px;
+    margin-top: 27px;
+}
+
+.tab {
+    color: $white-color;
+    text-align: left;
+    font-size: 25px;
+    font-family: $font-monsterrat;
+    border-style: hidden;
+    outline: none;
+    width: auto;
+    height: auto;
+}
+
+.activeTab {
+    color: $blue-color;
+    text-align: left;
+    font-size: 25px;
+    font-family: $font-monsterrat;
+    border-style: hidden;
+    outline: none;
+    width: auto;
+    height: auto;
+}
+
+.input {
+    background-color: $white-color;
+    height:63px;
+    width:809px;
+    border-radius:10px;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:15px;
+    padding-bottom:15px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+    font-family: $font-monsterrat;
+    font-size: 20px ;
+    color: $gray-color;
+    margin-bottom: 39px;
+}
+
+
+.saveButton {
+    display:flex;
+    flex-direction: row;
+    background-color: $btn-color;
+    height:75px;
+    width:390px;
+    border-radius:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+    justify-content:center;
+    align-items:center;
+    gap:10;
+    color: $white-color;
+    font-family: $font-monsterrat;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.exit{
+    color:$white-color;
+    text-align:left;
+    font-size:30px;
+    font-family:$font-monsterrat;
+    line-height:26px;
+    border-style:hidden;
+    outline:none;
+    width:auto;
+    margin-top: 73px;
+}
+
+
+@media (max-width: 1600.98px) { 
+    
+    .account{
+        justify-items: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .container {
+        width: 600px;
+    }
+
+    .input {
+        width: 600px;
+    }
+
+}
+
+@media (max-width: 1399.98px) { 
+
+    .container {
+        width: 400px;
+    }
+
+    .input{
+        width: 400px;
+        font-size:15px;
+        height: 53px;
+    }
+    
+    .tab {
+        font-size: 20px;
+    }
+
+    .activeTab {
+        font-size: 20px;
+    }
+
+    .text1 {
+        font-size: 30px;
+    }
+
+    .exit {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .saveButton {
+        width: 300px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .image{
+        width: 500px;
+        height: 620px;
+    }
+
+
+}
+
+
+
+@media (max-width: 1199.98px) { 
+    .account {
+        padding-left: 100px;
+        padding-right: 100px;
+        gap:50px;
+    }
+
+    .image {
+        height: 660px;
+        width: 600px;
+    }
+
+    
+}
+
+@media (max-width: 991.98px) { 
+
+    .container {
+        width: 300px;
+    }
+
+    .input{
+        width: 280px;
+        font-size:10px;
+        height: 33px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    .tab {
+        font-size: 15px;
+    }
+
+    .activeTab {
+        font-size: 15px;
+    }
+
+    .text1 {
+        font-size: 25px;
+    }
+
+    .exit {
+        margin-top: 5px;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+
+    .saveButton {
+        width: 200px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .solid {
+        margin-bottom: 25px;
+    }
+
+    .image {
+        margin-top: 20px;
+        height: 360px;
+        width: 520px;
+    }
+
+}
+
+@media (max-width: 767.98px) { 
+
+    .account{
+        height: auto;
+        padding-bottom: 300px;
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    .image {
+        display: none;
+    }
+
+    .container{
+        width: 612px;
+    }
+    .input {
+        width: 612px;
+        height: 48px;
+        font-size: 15px;
+        margin-bottom: 39px;
+    }
+
+    .tabBlock{
+        margin-top: 18px;
+    }
+    
+    .solid {
+        margin-bottom: 61px;
+    }
+
+    .saveButton {
+        width: 286px;
+        height: 52px;
+        font-size: 20px ;
+        align-self: center;
+        margin-left: 163px;
+    }
+
+    .exit{
+        font-size: 20px;
+        margin-left: 273px;
+    }
+    
+
+}
+
+
+@media (max-width: 620.98px) { 
+
+    .account {
+        
+        height: auto;
+        padding-bottom: 300px;
+        padding-top: 30px;
+       
+    }
+    .container {
+        width: 420px;
+        padding-top: 0;
+    }
+
+    .input {
+        width: 420px;
+    }
+
+    .saveButton {
+        margin-left: 73px;
+    }
+
+    .exit {
+        margin-left: 177px;
+    }
+
+}
+
+
+@media (max-width: 429.98px) { 
+    .account{
+        height: auto;
+        padding-bottom: 300px;
+        padding-top: 30px;
+    }
+    .container {
+        width: 300px;
+        padding-top: 0;
+        height: auto;
+    }
+
+    .text1{
+        font-size: 19px;
+    }
+
+    .tabBlock{
+        margin-top: 31px;
+    }
+
+    .tab {
+        font-size: 12px;
+    }
+
+    .activeTab {
+        font-size:12px;
+    }
+
+    .input{
+        width: 300px;
+        font-size: 12px;
+        margin-bottom: 35px;
+    }
+
+    .solid{
+        margin-bottom: 27px;
+    }
+
+    .saveButton{
+        width: 184px;
+        height: 38px;
+        font-size: 13px;
+        margin-left: 61px;
+    }
+
+    .exit {
+        font-size: 15px;
+        margin-left: 125px;
+        margin-top: 22px;
+    }
+
+}
