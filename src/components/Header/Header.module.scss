@@ -91,7 +91,82 @@
     }
     
 }
-    
+
+.menuIcon{
+    background-color: $white-color;
+    border: none;
+    position: relative;
+    width: 29px;
+    height: 33px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: calc(100%);
+    width:100%;
+    height:auto;
+    padding: 20px;
+    background-color: $white-color;
+    //border-radius: 10px;
+    visibility: hidden;
+    //transform:translateY(10px);
+    transition: 0.2s;
+    z-index: 20;
+}
+
+.menu.active {
+    //transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 20;
+}
+
+.menuList {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.menuListItem {
+    color: $black-color;
+    font-family: $font-monsterrat;
+    font-size: 20px;
+    font-style: bold;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: normal;
+    transition: $transition;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+.tryButtonMenu {
+    flex-direction: row;
+    justify-content: center;
+    padding: 3px 0;
+    width: 250px;
+    height: 40px;
+    background: $btn-color;
+    border-radius: 10px;
+    color: $white-color;
+    font-family: $font-monsterrat;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 30px;
+    vertical-align:text-bottom;
+    border-style:hidden;
+    outline:none;
+    align-items:center;
+    position:relative;
+    margin-left: 30px;
+}
 
 @media (max-width: 1738px) { 
     .tryButton{
@@ -209,5 +284,9 @@
     }
     .tryButton {
         display: none;
+    }
+    .menuIcon{
+        display:flex;
+        margin-left: 85%;
     }
 }
