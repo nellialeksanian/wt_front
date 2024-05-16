@@ -25,8 +25,8 @@ function Settings() {
                 <hr className={styles.solid}></hr>
                 <div className={styles.tabContent}>
                     <div className={toggleState === 1 ? styles.activeContent : styles.content}>
-                        <textarea className={styles.input} id="email">Эл. адрес</textarea>
-                        <textarea className={styles.input} id="username">Имя пользователя</textarea>
+                        <input className={styles.input} id="email" placeholder='Эл. адрес'></input>
+                        <input className={styles.input} id="username"placeholder='Имя пользователя'></input>
                         <button className={styles.saveButton}>
                             <Link href = '/'>Сохранить изменения</Link>
                         </button>
@@ -35,8 +35,8 @@ function Settings() {
                         </div>
                     </div>
                     <div className={toggleState === 2 ? styles.activeContent : styles.content}>
-                        <textarea className={styles.input} id="old_pass">Старый пароль</textarea>
-                        <textarea className={styles.input} id="new_pass">Новый пароль</textarea>
+                        <input className={styles.input} id="old_pass" placeholder='Старый пароль'></input>
+                        <input className={styles.input} id="new_pass" placeholder='Новый пароль'></input>
                         <button className={styles.saveButton}>
                             <Link href = '/'>Сохранить изменения</Link>
                         </button>
