@@ -26,7 +26,8 @@ function Header() {
               </div>
           </div>
         </nav>
-        <Link href="/Account" className={styles.person}>
+        <Link href="/Enter" className={styles.person}>
+        {/* <Link href="/Account" className={styles.person}> */}
           <Image fill src="/assets/icons/person.svg" alt="person" />
         </Link>
         <button className={styles.tryButton}>
