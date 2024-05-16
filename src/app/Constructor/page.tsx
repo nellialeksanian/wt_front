@@ -74,38 +74,20 @@ function Constructor() {
           </Link>
         </div>
       </div>
-      <div className={styles.wrappertop}>
-      <div className={styles.blueline}></div>
-        <div className={styles.bootmtext}>
-          <div className={styles.bootmtext2}>
-            <div className={styles.text2}>Дата</div>
-            <div className={styles.text3}>10.05.24</div>
+      <div className={styles.list}>
+        <div className={styles.wrapperbottom}>
+          <audio controls className={styles.customAudio}>
+            <source src='/assets/audio/audio_1.mp3'></source>
+          </audio>
+          <button className={styles.iconsgen}></button>
           </div>
-          <div className={styles.bootmtext2}>
-            <div className={styles.text2}>Название</div>
-            <div className={styles.text3}>BestAudioEver</div>
+          <div className={styles.wrapperbottom}>
+          <audio controls className={styles.customAudio}>
+            <source src='/assets/audio/audio_1.mp3'></source>
+          </audio>
+          <button className={styles.iconsgen}></button>
           </div>
-          <div className={styles.bootmtext2}>
-            <div className={styles.text2}>Взаимодействие</div>
-            <div className={styles.text3}>10.05.24</div>
-          </div>
-          <div className={styles.bootmtext2}>
-            <div className={styles.text2}>Продолжительность</div>
-            <div className={styles.text3}>00.07</div>
-          </div>
-          <div className={styles.iconstogether}>
-            <Link href="#" className={styles.iconsgen}>
-              <Image fill src="assets/icons/play.svg" alt="icon" />
-            </Link>
-            <Link href="#" className={styles.iconsgen}>
-              <Image fill src="assets/icons/cloud.svg" alt="icon" />
-            </Link>
-            <Link href="#" className={styles.iconsgen}>
-              <Image fill src="assets/icons/trash.svg" alt="icon" />
-            </Link>
-            </div>
-          </div>
-      </div>
+        </div>
     </main>
   );
 }

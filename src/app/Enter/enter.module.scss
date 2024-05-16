@@ -3,13 +3,43 @@
 .enter {
   position: sticky;
   display: flex;
-  height: 1080px;
   margin-top: 0;
   background-color: $black-color;
   padding-left: 200px;
   padding-top: 187px;
   padding-right: 207px;
+  padding-bottom: 187px;
   
+}
+
+@media screen and (max-width: 1900px) {
+    .enter {
+        padding-top: 100px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 100px;
+    }
+  }
+
+@media screen and (max-width: 1091px) {
+    .enter {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .enter {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .enter {
+        padding-top: 100px;
+    }
 }
 
 .picture{
@@ -20,17 +50,71 @@
     align-items: center;
 }
 
+@media screen and (max-width: 1900px) {
+    .picture {
+        width: 608px;
+        height: 655px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .picture {
+        width: 508px;
+        height: 555px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .picture {
+        width: 458px;
+        height: 505px;
+    }
+}
+
+@media screen and (max-width: 1091px) {
+    .picture {
+        width: 400px;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .picture {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+}
+
 .wrapper{
     display: flex;
     gap: 112px;
-    width: 1513px;
     height: 705px;
 }
+
+@media screen and (max-width: 1900px) {
+    .wrapper {
+        gap: 35px;
+        align-items: center;
+    }
+  }
+
+@media screen and (max-width: 1091px) {
+    .wrapper {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: row-reverse;
+        gap: 0px;
+    }
+  }
 
 .wrapperleft{
     display: grid;
     height: 705px;
-    width: 743px;
     gap: 12px;
 }
 
@@ -44,12 +128,27 @@
 .title{
     font-family: $font-monsterrat;
     font-size: 43px;
-    line-height: 70px;
+    line-height: 60px;
     font-weight: 700;
     color: $white-color;
     width: 445px;
-    height: 70px;
+    height: 60px;
 }
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 33px;
+        line-height: 30px;
+        height: 30px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .title {
+        font-size: 30px;
+    }
+  }
+
 .description{
     font-family: $font-monsterrat;
     font-size: 30px;
@@ -57,8 +156,17 @@
     font-weight: 500;
     color: $white-color;
     width: 410px;
-    height: 70px;
+    height: 60px;
 }
+
+@media screen and (max-width: 500px) {
+    .description {
+        font-size: 20px;
+        line-height: 30px;
+        height: 30px;
+    }
+  }
+
 .googlebutton{
     display: flex;
     justify-content: center;
@@ -76,12 +184,79 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1900px) {
+    .googlebutton {
+        width: 693px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .googlebutton {
+        width: 603px;
+        height: 55px;
+    }  
+}
+
+@media screen and (max-width: 1200px) {
+    .googlebutton {
+        width: 553px;
+        height: 50px;
+        background-size: 40px 40px;
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .googlebutton {
+        width: 743px;
+        height: 65px;
+    }  
+}
+
+@media screen and (max-width: 786px) {
+    .googlebutton {
+        width: 600px;
+        height: 50px;
+        background-size: 40px 40px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .googlebutton {
+        width: 500px;
+        height: 40px;
+        background-size: 35px 35px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .googlebutton {
+        width: 400px;
+        height: 40px;
+        background-size: 30px 30px;
+    }  
+}
+
+@media screen and (max-width: 450px) {
+    .googlebutton {
+        background-size: 25px 25px;
+        width: 300px;
+        height: 35px;
+    }  
+}
+
 .textlogo{
-    height: 212px;
     display: grid;
     gap:4px;
 
 }
+
+@media screen and (max-width: 992px) {
+    .textlogo {
+        justify-items: center;
+        text-align: center;
+    }  
+}
+
 
 .enterbutton{
     display: flex;
@@ -105,7 +280,12 @@
     outline:none;
     align-items:center;
 }
-
+@media screen and (max-width: 992px) {
+    .enterbutton {
+        width: 258px;
+        height: 60px;
+    }  
+}
 .login{
     width: 743px;
     height: 65px;
@@ -120,25 +300,109 @@
     font-weight: 500;
 }
 
+@media screen and (max-width: 1900px) {
+    .login {
+        width: 693px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .login {
+        width: 603px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .login {
+        width: 553px;
+        height: 50px;
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .login {
+        width: 743px;
+        height: 65px;
+    }  
+}
+
+@media screen and (max-width: 786px) {
+    .login {
+        width: 600px;
+        height: 50px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .login {
+        font-size: 16px;
+        width: 400px;
+        height: 40px;
+        justify-self: center
+    }  
+}
+
+@media screen and (max-width: 450px) {
+    .login {
+        font-size: 16px;
+        width: 300px;
+        height: 35px;
+        justify-self: center
+    }  
+}
+
 .passwordContainer { 
     position: relative;
     display: flex;
     align-items: center; 
   }
+
+@media screen and (max-width: 620px) {
+    .passwordContainer {
+        justify-content: center
+    }  
+}
   
-  .label {
-      position: absolute;
-      right: 1.5rem; 
-      top: 50%;
-      transform: translateY(-50%);
-      width: 25px;
-      height: 20px;
-      cursor: pointer;
-  }
+.label {
+    position: absolute;
+    right: 1.5rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
 
 .blocktext{
     display: grid;
     gap: 48px;
+}
+
+@media screen and (max-width: 1200px) {
+    .blocktext {
+        gap: 38px;
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .blocktext {
+        gap: 48px;
+    }  
+}
+
+@media screen and (max-width: 786px) {
+    .blocktext {
+        gap: 38px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .blocktext {
+        gap: 28px;
+        justify-content: center;
+        justify-items: center;
+    }  
 }
 
 .text{
@@ -148,6 +412,32 @@
     font-weight: 500;
     height: 41px;
 }
+
+@media screen and (max-width: 1200px) {
+    .text {
+        font-size: 20px;
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .text {
+        font-size: 25px;
+    }  
+}
+
+@media screen and (max-width: 786px) {
+    .text {
+        font-size: 22px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .text {
+        font-size: 18px;
+        height: 25px;
+    }  
+}
+
 .bluetext{
     font-family: $font-monsterrat;
     color: $btn-color;
@@ -156,8 +446,41 @@
     height: 41px;
 }
 
+@media screen and (max-width: 1200px) {
+    .bluetext {
+        font-size: 20px;
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .bluetext {
+        font-size: 25px;
+    }  
+}
+
+@media screen and (max-width: 786px) {
+    .bluetext {
+        font-size: 22px;
+    }  
+}
+
+@media screen and (max-width: 620px) {
+    .bluetext {
+        font-size: 18px;
+        height: 25px;
+    }  
+}
+
 .textbotton{
     display: flex;
     gap: 8px;
     justify-content: center;
+}
+
+@media screen and (max-width: 620px) {
+    .textbotton {
+        align-items: center;
+        flex-direction: column;
+        justify-content: normal;
+    }  
 }
