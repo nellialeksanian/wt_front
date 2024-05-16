@@ -1,50 +1,33 @@
-"use client";
 
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Account.module.scss';
-import { useState } from 'react';
 
 function Account() {
-
-    const [toggleState, setToggleState] = useState(1);
-
-    const toggleTab = (index) => {
-        setToggleState(index);
-    }
 
     return (
         <main className={styles.account}>
             <div className={styles.container}>
-                <span className={styles.text1}>Настройки аккаунта</span>
-                <div className={styles.tabBlock}>
-                    <div className={toggleState === 1 ? styles.activeTab : styles.tab} 
-                    onClick={() => toggleTab(1)}>Общее</div>
-                    <div className={toggleState === 2 ? styles.activeTab : styles.tab} 
-                    onClick={() => toggleTab(2)}> Сменить пароль</div>
+                <span className={styles.text1}>Профиль</span>
+                <div className={styles.containerMedium}>
+                    <div className={styles.containerSmall}>
+                        <span className={styles.text2}>Имя Пользователя</span>
+                        <span id = 'username'className={styles.text3}>@username</span>
+                    </div>
+                    <div className={styles.containerSmall}>
+                        <span className={styles.text2}>Эл. почта</span>
+                        <span id = 'email' className={styles.text3}>Username@gmail.com</span>
+                    </div>
+                    <div className={styles.containerSmall}>
+                        <span className={styles.text2}>Дата регистрации</span>
+                        <span id = 'date' className={styles.text3}>00.00.0000</span>
+                    </div>
                 </div>
-                <hr className={styles.solid}></hr>
-                <div className={styles.tabContent}>
-                    <div className={toggleState === 1 ? styles.activeContent : styles.content}>
-                        <textarea className={styles.input} id="email">Эл. адрес</textarea>
-                        <textarea className={styles.input} id="username">Имя пользователя</textarea>
-                        <button className={styles.saveButton}>
-                            <Link href = '/'>Сохранить изменения</Link>
-                        </button>
-                        <div className={styles.exit}>
-                            <Link href="/">Выход</Link>
-                        </div>
-                    </div>
-                    <div className={toggleState === 2 ? styles.activeContent : styles.content}>
-                        <textarea className={styles.input} id="old_pass">Старый пароль</textarea>
-                        <textarea className={styles.input} id="new_pass">Новый пароль</textarea>
-                        <button className={styles.saveButton}>
-                            <Link href = '/'>Сохранить изменения</Link>
-                        </button>
-                        <div className={styles.exit}>
-                            <Link href="/">Выход</Link>
-                        </div>
-                    </div>
+                <button className={styles.saveButton}>
+                    <Link href = '/Settings'>Настройки аккаунта</Link>
+                </button>
+                <div className={styles.exit}>
+                    <Link href="/">Выход</Link>
                 </div>
             </div>
             <div className={styles.image}>

@@ -6,6 +6,9 @@ import { useState } from 'react';
 
 function Header() {
   const [isOpen, setOpen] = useState(false)
+  const closeMenu = () => {
+    setOpen(false);
+  };
   
   return (
     <header className={styles.header}>
@@ -36,20 +39,20 @@ function Header() {
       </div>
       <nav className={`${styles.menu} ${isOpen ? styles.active : ""}`}>
          <div className={styles.menuList}>
-            <div className={styles.menuListItem}>
-              <Link href="#AboutUs2">О нас</Link>
+            <div className={styles.menuListItem} onClick={closeMenu}>
+              <Link href="/#AboutUs2">О нас</Link>
             </div>
-            <div className={styles.menuListItem}>
-              <Link href="#AIvoice">Голос ИИ</Link>
+            <div className={styles.menuListItem} onClick={closeMenu}>
+              <Link href="/#AIvoice">Голос ИИ</Link>
             </div>
-            <div className={styles.menuListItem}>
+            <div className={styles.menuListItem} onClick={closeMenu}>
               <Link href="/">Войти</Link>
             </div>
-            <div className={styles.menuListItem}>
-              <Link href="/">Настройки аккаунта</Link>
+            <div className={styles.menuListItem} onClick={closeMenu}>
+              <Link href="/Account">Личный кабинет</Link>
             </div>
           </div>
-          <button className={styles.tryButtonMenu}>
+          <button className={styles.tryButtonMenu} onClick={closeMenu}>
             <Link href = "/Constructor">Попробовать сейчас</Link>
           </button>
       </nav>
