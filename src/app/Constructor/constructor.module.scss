@@ -11,45 +11,6 @@
   padding-top: 120px;
   padding-right: 250px;
 }
-@media screen and (max-width: 1400px) {
-  .constructor {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .constructor {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .constructor {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 60px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .constructor {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
-    height: 1500px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .constructor {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 15px;
-    height: 1000px;
-  }
-}
 
 .text {
   display: grid;
@@ -58,19 +19,6 @@
   gap:3px;
   position:relative;
   margin-bottom: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .text {
-    align-content: center;
-    min-height: 113px;   
-  }
-}
-@media screen and (max-width: 576px) {
-  .text {
-    min-height: 65px;
-    margin-bottom: 12px; 
-  }
 }
 
 .title {
@@ -82,46 +30,6 @@
   margin-bottom: 4px;
 }
 
-@media screen and (max-width: 1400px) {
-  .title {
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .title {
-    font-size: 34px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .title {
-    line-height: 35px;
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 22px;   
-    line-height: 30px; 
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .title {
-    font-size: 16px;
-    line-height: 25px;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .title {
-    font-size: 13px;
-    line-height: 15px;
-  }
-}
-
 .description {
   line-height: 28px;
   width: 100%;
@@ -130,33 +38,6 @@
   font-family: $font-monsterrat;
   font-size: 25px;
 }
-
-@media screen and (max-width: 992px) {
-  .description {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .description {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .description {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  .description {
-    font-size: 9px;
-    line-height: 12px;
-  }
-}
-
 
 .input_space {
   padding-top: 24px;
@@ -172,31 +53,6 @@
   font-size: 20px;
   position: relative;
 }
-@media screen and (max-width: 1200px) {
-  .input_space {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .input_space {
-    height: 443px;
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .input_space {
-    height: 310px;
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .input_space {
-    height: 409px;
-    font-size: 12px;
-  }
-}
 
 .input_field { 
   background-color: $desc-color;
@@ -206,24 +62,6 @@
   resize: none;
   border-color: none;
   font-size: 22px;
-}
-
-@media screen and (max-width: 992px) {
-  .input_field {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .input_field {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .input_field {
-    font-size: 14px;
-  }
 }
 
 .character_count { 
@@ -264,30 +102,6 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 992px) {
-  .Button1 {
-    width: 275px;
-    font-size: 20px;
-    height: 50px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Button1 {
-    width: 209px;
-    font-size: 17px;
-    height: 45px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .Button1 {
-    width: 130px;
-    font-size: 12px;
-    height: 35px;
-  }
-}
-
 .Button2 {
   display: flex;
   
@@ -309,31 +123,6 @@
   align-items:center;
 }
 
-@media screen and (max-width: 992px) {
-  .Button2 {
-    width: 275px;
-    font-size: 20px;
-    height: 50px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .Button2 {
-    width: 209px;
-    font-size: 17px;
-    height: 45px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .Button2 {
-    width: 130px;
-    font-size: 12px;
-    height: 35px;
-  }
-}
-
-
 .menu{
   position: relative;
   padding-top: 17px;
@@ -348,30 +137,6 @@
   transform: translateY(-10px);
   visibility: hidden;
   transition: 0.3s;
-}
-
-@media screen and (max-width: 992px) {
-  .menu {
-    width: 275px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .menu {
-    width: 209px;
-    height: 198px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .menu {
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-left: 12px;
-    padding-right: 20px;
-    width: 130px;
-    height: 170px;
-  }
 }
 
 .menu.active {
@@ -391,45 +156,12 @@
 
 }
 
-@media screen and (max-width: 768px) {
-  .voice {
-    margin-top: 4px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .voice {
-    margin-top: 0px;
-    width: 100px;
-  }
-}
-
 .iconwoman{
   margin-right: 34px;
   position: relative;
   width: 30px;
   height: 36px;
   transition: 0.2s ease-in-out;
-}
-@media screen and (max-width: 992px) {
-  .iconwoman {
-    width: 23px;
-    height: 29px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .iconwoman {
-    width: 15px;
-    height: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .iconwoman {
-    width: 12px;
-    height: 17px;
-  }
 }
 
 .iconman{
@@ -438,27 +170,6 @@
   width: 35px;
   height: 36px;
   transition: 0.2s ease-in-out;
-}
-
-@media screen and (max-width: 992px) {
-  .iconman {
-    width: 27px;
-    height: 28px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .iconman {
-    width: 18px;
-    height: 19px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .iconman {
-    width: 15px;
-    height: 16px;
-  }
 }
 
 .name {
@@ -470,21 +181,6 @@
   font-size: 19px;
 }
 
-@media screen and (max-width: 768px) {
-  .name {
-    font-size: 11px;
-    height: 14px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .name {
-    font-size: 7px;
-    height: 11px;
-    width: 60px;
-  }
-}
-
 .wrapperleft{
   display: flex;
   flex-wrap: wrap;
@@ -493,17 +189,6 @@
   width: 348px;
   height: 384px;
   align-content: flex-start
-}
-@media screen and (max-width: 768px) {
-  .wrapperleft {
-    height: 250px;
-  }
-}
-
-@media screen and (max-width: 586px) {
-  .wrapperleft {
-    height: 200px;
-  }
 }
 
 .wrapperright{
@@ -514,14 +199,6 @@
   max-height: 158px;
   justify-items: end;
 }
-
-@media screen and (max-width: 768px) {
-  .wrapperright {
-    grid-gap: 12px;
-    max-height: 105px;
-  }
-}
-
 
 .gentext{
   line-height: 26px;
@@ -535,68 +212,6 @@
   margin-bottom: 24px;
 }
 
-@media screen and (max-width: 1500px) {
-  .gentext {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .gentext {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 1070px) {
-  .gentext {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .gentext {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 896px) {
-  .gentext {
-    font-size: 14px;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .gentext {
-    width: 294px;
-    height: 34px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .gentext {
-    width: 255px;
-  }
-}
-
-@media screen and (max-width: 586px) {
-  .gentext {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 510px) {
-  .gentext {
-    width: 243px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .gentext {
-    width: 140px;
-  }
-}
-
 .audioserch
 {
   width: 100%;
@@ -608,20 +223,6 @@
   align-items: stretch;
 }
 
-@media screen and (max-width: 990px) {
-  .audioserch {
-    margin-top: 12px;
-    margin-bottom: 12px
-  }
-}
-@media screen and (max-width: 786px) {
-  .audioserch {
-    width: 482px;
-    display: grid;
-    gap: 2px;  
-  }
-}
-
 .searchbar {
   display: flex;
   width: 374px;
@@ -631,41 +232,6 @@
   gap: 10px;
 }
 
-@media screen and (max-width: 1450px) {
-  .searchbar {
-    width: 325px;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .searchbar {
-    width: 285px;
-  }
-}
-
-@media screen and (max-width: 1020px) {
-  .searchbar {
-    width: 239px;
-  }
-}
-
-@media screen and (max-width: 812px) {
-  .searchbar {
-    width: 195px;
-  }
-}
-
-@media screen and (max-width: 786px) {
-  .searchbar {
-    width: 442px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .searchbar {
-    width: 100%;
-  }
-}
 .searchfield {
   width: 325px;
   height: 53px;
@@ -679,48 +245,6 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 1450px) {
-  .searchfield {
-    width: 285px;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .searchfield {
-    width: 245px;
-    height: 42px;
-  }
-}
-
-@media screen and (max-width: 1020px) {
-  .searchfield {
-    width: 205px;
-    height: 39px;
-  }
-}
-
-@media screen and (max-width: 812px) {
-  .searchfield {
-    width: 165px;
-    height: 31px;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 786px) {
-  .searchfield {
-    width: 100%;
-    height: 27px;
-    border-radius: 6px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .searchfield {
-    height: 23px;
-  }
-}
-
 .searchbutton {
   position: relative;
   width: 33px;
@@ -730,26 +254,6 @@
   outline: none;
 }
 
-@media screen and (max-width: 1020px) {
-  .searchbutton {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 812px) {
-  .searchbutton {
-    width: 27px;
-    height: 27px;
-  }
-}
-
-@media screen and (max-width: 588px) {
-  .searchbutton {
-    width: 20px;
-    height: 20px;
-  }
-}
 /* Состояние фокуса для поля ввода */
 .searchfield:focus {
   box-shadow: 0 0 5px $desc-color;
@@ -788,12 +292,6 @@
       }
 }
 
-@media screen and (max-width: 1200px) {
-  .customAudio {
-    height: 40px;
-  }
-}
-
 .iconsgen{
   position: relative;
   height: 50px;
@@ -821,7 +319,56 @@
   gap: 24px;
 }
 
+@media screen and (max-width: 1500px) {
+  .gentext {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .searchbar {
+    width: 325px;
+  }
+  .searchfield {
+    width: 285px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .constructor {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .searchbar {
+    width: 285px;
+  }
+
+  .searchfield {
+    width: 245px;
+    height: 42px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
+  .constructor {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .input_space {
+    font-size: 18px;
+  }
+
   .customAudio {
     height: 40px;
   }
@@ -829,6 +376,13 @@
   .iconsgen {
     height: 40px;
     width: 40px;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+  .gentext {
+    font-size: 20px;
   }
 }
 
@@ -840,5 +394,334 @@
   .iconsgen {
     height: 35px;
     width: 35px;
+  }
+  .gentext {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .searchbar {
+    width: 239px;
+  }
+
+  .searchfield {
+    width: 205px;
+    height: 39px;
+  }
+
+  .searchbutton {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .constructor {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 60px;
+  }
+
+  .title {
+    line-height: 35px;
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+
+  .input_space {
+    height: 443px;
+    font-size: 16px;
+  }
+
+  .input_field {
+    font-size: 20px;
+  }
+
+  .Button1 {
+    width: 275px;
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .Button2 {
+    width: 275px;
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .menu {
+    width: 275px;
+  }
+
+  .iconwoman {
+    width: 23px;
+    height: 29px;
+  }
+
+  .iconman {
+    width: 27px;
+    height: 28px;
+  }
+
+  .gentext {
+    font-size: 16px;
+  }
+
+  .audioserch {
+    margin-top: 12px;
+    margin-bottom: 12px
+  }
+
+}
+
+@media screen and (max-width: 896px) {
+  .gentext {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .searchbar {
+    width: 195px;
+  }
+
+  .searchfield {
+    width: 165px;
+    height: 31px;
+    font-size: 12px;
+  }
+
+  .searchbutton {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .constructor {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    height: 1500px;
+  }
+
+  .text {
+    align-content: center;
+    min-height: 113px;   
+  }
+
+  .title {
+    font-size: 22px;   
+    line-height: 30px; 
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .input_space {
+    height: 310px;
+    font-size: 14px;
+  }
+
+  .input_field {
+    font-size: 18px;
+  }
+
+  .Button1 {
+    width: 209px;
+    font-size: 17px;
+    height: 45px;
+  }
+
+  .Button2 {
+    width: 209px;
+    font-size: 17px;
+    height: 45px;
+  }
+
+  .menu {
+    width: 209px;
+    height: 198px;
+  }
+
+  .voice {
+    margin-top: 4px;
+  }
+
+  .iconwoman {
+    width: 15px;
+    height: 20px;
+  }
+
+  .iconman {
+    width: 18px;
+    height: 19px;
+  }
+  .name {
+    font-size: 11px;
+    height: 14px;
+  }
+
+  .wrapperleft {
+    height: 250px;
+  }
+
+  .wrapperright {
+    grid-gap: 12px;
+    max-height: 105px;
+  }
+
+  .gentext {
+    width: 294px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .audioserch {
+    width: 482px;
+    display: grid;
+    gap: 2px;  
+  }
+
+  .searchbar {
+    width: 442px;
+  }
+
+  .searchfield {
+    width: 100%;
+    height: 27px;
+    border-radius: 6px;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .gentext {
+    width: 255px;
+  }
+}
+
+@media screen and (max-width: 588px) {
+  .wrapperleft {
+    height: 200px;
+  }
+
+  .gentext {
+    font-size: 10px;
+  }
+
+  .searchbutton {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .constructor {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    height: 1000px;
+  }
+
+  .text {
+    min-height: 65px;
+    margin-bottom: 12px; 
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .input_space {
+    height: 409px;
+    font-size: 12px;
+  }
+
+  .input_field {
+    font-size: 14px;
+  }
+
+  .Button1 {
+    width: 130px;
+    font-size: 12px;
+    height: 35px;
+  }
+
+  .Button2 {
+    width: 130px;
+    font-size: 12px;
+    height: 35px;
+  }
+
+  .menu {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 20px;
+    width: 130px;
+    height: 170px;
+  }
+
+  .voice {
+    margin-top: 0px;
+    width: 100px;
+  }
+
+  .iconwoman {
+    width: 12px;
+    height: 17px;
+  }
+
+  .iconman {
+    width: 15px;
+    height: 16px;
+  }
+
+    .name {
+    font-size: 7px;
+    height: 11px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .gentext {
+    width: 243px;
+  }
+  .searchbar {
+    width: 100%;
+  }
+
+  .searchfield {
+    height: 23px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .gentext {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .title {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .description {
+    font-size: 9px;
+    line-height: 12px;
   }
 }

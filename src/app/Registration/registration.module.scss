@@ -12,36 +12,6 @@
   
 }
 
-@media screen and (max-width: 1900px) {
-    .registration {
-        padding-top: 100px;
-        padding-left: 35px;
-        padding-right: 35px;
-        padding-bottom: 50px;
-    }
-  }
-
-@media screen and (max-width: 1091px) {
-    .registration {
-        padding-top: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 50px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .registration {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 786px) {
-    .registration {
-        padding-top: 100px;
-    }
-}
-
 .picture{
     width: 658px;
     height: 705px;
@@ -49,96 +19,22 @@
     display: flex;
     align-items: center;
 }
-@media screen and (max-width: 1900px) {
-    .picture {
-        width: 608px;
-        height: 655px;
-    }
-  }
-
-@media screen and (max-width: 1400px) {
-    .picture {
-        width: 508px;
-        height: 555px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .picture {
-        width: 458px;
-        height: 505px;
-    }
-}
-
-@media screen and (max-width: 1091px) {
-    .picture {
-        width: 400px;
-        height: 450px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .picture {
-        width: 0px;
-        height: 0px;
-        visibility: hidden;
-    }
-}
 
 .wrapper{
     display: flex;
     gap: 112px;
 }
 
-@media screen and (max-width: 1900px) {
-    .wrapper {
-        gap: 35px;
-        align-items: center;
-    }
-  }
-
-@media screen and (max-width: 1091px) {
-    .wrapper {
-        gap: 15px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .wrapper {
-        flex-direction: row-reverse;
-        gap: 0px;
-    }
-  }
-
 .wrapperleft{
     display: grid;
     gap: 12px;
 }
-
-@media screen and (max-width: 620px) {
-    .wrapperleft {
-        width: 400px;
-        justify-content: center;
-    }
-  }
 
 .enterspace{
     display: grid;
     gap: 24px;
     justify-items: center;
     align-items: center;
-}
-
-@media screen and (max-width: 992px) {
-    .enterspace {
-        gap: 12px;
-    }
-  }
-@media screen and (max-width: 620px) {
-    .enterspace {
-        width: 400px;
-        justify-content: center;
-    }
 }
 
 .title{
@@ -151,27 +47,6 @@
     height: 50px;
 }
 
-@media screen and (max-width: 786px) {
-    .title {
-        font-size: 32px;
-        line-height: 32px;
-        height: 32px;
-    }
-  }
-@media screen and (max-width: 500px) {
-    .title {
-        font-size: 28px;
-        line-height: 30px;
-        height: 30px;
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    .title {
-        font-size: 22px;
-    }
-  }
-
 .description{
     font-family: $font-monsterrat;
     font-size: 30px;
@@ -181,20 +56,6 @@
     width: 410px;
     height: 40px;
 }
-@media screen and (max-width: 786px) {
-    .description {
-        font-size: 25px;
-        line-height: 32px;
-        height: 32px;
-    }
-  }
-@media screen and (max-width: 500px) {
-    .description {
-        font-size: 20px;
-        line-height: 30px;
-        height: 30px;
-    }
-  }
 
 .googlebutton{
     display: flex;
@@ -213,78 +74,10 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1900px) {
-    .googlebutton {
-        width: 693px;
-    }
-  }
-
-@media screen and (max-width: 1400px) {
-    .googlebutton {
-        width: 603px;
-        height: 55px;
-    }  
-}
-
-@media screen and (max-width: 1200px) {
-    .googlebutton {
-        width: 553px;
-        height: 50px;
-        background-size: 40px 40px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .googlebutton {
-        width: 743px;
-        height: 65px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .googlebutton {
-        width: 600px;
-        height: 50px;
-        background-size: 40px 40px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .googlebutton {
-        width: 500px;
-        height: 40px;
-        background-size: 35px 35px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .googlebutton {
-        width: 400px;
-        height: 40px;
-        background-size: 30px 30px;
-    }  
-}
-
-@media screen and (max-width: 450px) {
-    .googlebutton {
-        background-size: 25px 25px;
-        width: 300px;
-        height: 35px;
-    }  
-}
-
 .textlogo{
     display: grid;
     gap:4px;
 }
-
-@media screen and (max-width: 992px) {
-    .textlogo {
-        justify-items: center;
-        text-align: center;
-    }  
-}
-
 
 .enterbutton{
     display: flex;
@@ -310,22 +103,6 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 992px) {
-    .enterbutton {
-        width: 258px;
-        height: 60px;
-        font-size: 30px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .enterbutton {
-        width: 208px;
-        height: 50px;
-        font-size: 25px;
-    }  
-}
-
 .login{
     width: 743px;
     height: 65px;
@@ -340,68 +117,10 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 1900px) {
-    .login {
-        width: 693px;
-    }
-  }
-
-@media screen and (max-width: 1400px) {
-    .login {
-        width: 603px;
-        height: 55px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .login {
-        width: 553px;
-        height: 50px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .login {
-        width: 743px;
-        height: 65px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .login {
-        width: 600px;
-        height: 50px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .login {
-        font-size: 16px;
-        width: 400px;
-        height: 40px;
-        justify-self: center
-    }  
-}
-
-@media screen and (max-width: 450px) {
-    .login {
-        font-size: 16px;
-        width: 300px;
-        height: 35px;
-        justify-self: center
-    }  
-}
-
 .passwordContainer { 
   position: relative;
   display: flex;
   align-items: center; 
-}
-
-@media screen and (max-width: 620px) {
-    .passwordContainer {
-        justify-content: center
-    }  
 }
 
 .label {
@@ -419,63 +138,12 @@
     gap: 30px;
 }
 
-@media screen and (max-width: 1200px) {
-    .blocktext {
-        gap: 20px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .blocktext {
-        gap: 30px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .blocktext {
-        gap: 20px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .blocktext {
-        gap: 10px;
-        justify-content: center;
-        justify-items: center;
-    }  
-}
-
 .text{
     font-family: $font-monsterrat;
     color: $white-color;
     font-size: 25px;
     font-weight: 500;
     height: 41px;
-}
-
-@media screen and (max-width: 1200px) {
-    .text {
-        font-size: 20px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .text {
-        font-size: 25px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .text {
-        font-size: 22px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .text {
-        font-size: 18px;
-        height: 25px;
-    }  
 }
 
 .bluetext{
@@ -486,43 +154,10 @@
     height: 41px;
 }
 
-@media screen and (max-width: 1200px) {
-    .bluetext {
-        font-size: 20px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .bluetext {
-        font-size: 25px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .bluetext {
-        font-size: 22px;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .bluetext {
-        font-size: 18px;
-        height: 25px;
-    }  
-}
-
 .textbotton{
     display: flex;
     gap: 8px;
     justify-content: center;
-}
-
-@media screen and (max-width: 620px) {
-    .textbotton {
-        align-items: center;
-        flex-direction: column;
-        justify-content: normal;
-    }  
 }
 
 .agriment{
@@ -533,40 +168,9 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
-    .agriment {
-        font-size: 18px;
-    }  
-}
-
-@media screen and (max-width: 992px) {
-    .agriment {
-        font-size: 20px;
-    }  
-}
-
-@media screen and (max-width: 786px) {
-    .agriment {
-        font-size: 16px;
-        align-items: center;
-    }  
-}
-
-@media screen and (max-width: 620px) {
-    .agriment {
-        font-size: 14px;
-    }  
-}
-
 .block{
     display: grid;
     gap: 44px;
-}
-
-@media screen and (max-width: 992px) {
-    .block {
-        gap: 24px;
-    }  
 }
 
 .botton{
@@ -602,14 +206,6 @@
     justify-items: center;
     box-shadow: 0px 10px 25px rgba($black-color, 0.68);
   }
-
-@media screen and (max-width: 786px) {
-    .modalContent {
-        width: 336px;
-        height: 250px;
-        font-size: 26px;
-    }  
-}
   
   .modalButton {
     display: flex;
@@ -630,10 +226,312 @@
     cursor: pointer;
   }
 
+@media screen and (max-width: 1900px) {
+    .registration {
+        padding-top: 100px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 50px;
+    }
+
+    .picture {
+        width: 608px;
+        height: 655px;
+    }
+
+    .wrapper {
+        gap: 35px;
+        align-items: center;
+    }
+
+    .googlebutton {
+        width: 693px;
+    }
+
+    .login {
+        width: 693px;
+    }
+  }
+
+@media screen and (max-width: 1400px) {
+    .picture {
+        width: 508px;
+        height: 555px;
+    }
+
+    .googlebutton {
+        width: 603px;
+        height: 55px;
+    }  
+
+    .login {
+        width: 603px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .picture {
+        width: 458px;
+        height: 505px;
+    }
+
+    .googlebutton {
+        width: 553px;
+        height: 50px;
+        background-size: 40px 40px;
+    }  
+
+    .login {
+        width: 553px;
+        height: 50px;
+    } 
+
+    .blocktext {
+        gap: 20px;
+    } 
+
+    .text {
+        font-size: 20px;
+    } 
+
+    .bluetext {
+        font-size: 20px;
+    }  
+
+    .agriment {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1091px) {
+    .registration {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .picture {
+        width: 400px;
+        height: 450px;
+    }
+
+    .wrapper {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .registration {
+        justify-content: center;
+    }
+
+    .picture {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+
+    .wrapper {
+        flex-direction: row-reverse;
+        gap: 0px;
+    }
+
+    .enterspace {
+        gap: 12px;
+    }
+
+    .googlebutton {
+        width: 743px;
+        height: 65px;
+    }  
+
+    .textlogo {
+        justify-items: center;
+        text-align: center;
+    }  
+
+    .enterbutton {
+        width: 258px;
+        height: 60px;
+        font-size: 30px;
+    } 
+
+    .login {
+        width: 743px;
+        height: 65px;
+    }  
+
+    .blocktext {
+        gap: 30px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+    
+    .bluetext {
+        font-size: 25px;
+    }  
+
+    .agriment {
+        font-size: 20px;
+    } 
+    
+    .block {
+        gap: 24px;
+    } 
+}
+
 @media screen and (max-width: 786px) {
+    .registration {
+        padding-top: 100px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 32px;
+        height: 32px;
+    }
+
+    .description {
+        font-size: 25px;
+        line-height: 32px;
+        height: 32px;
+    }
+
+    .googlebutton {
+        width: 600px;
+        height: 50px;
+        background-size: 40px 40px;
+    }  
+
+    .enterbutton {
+        width: 208px;
+        height: 50px;
+        font-size: 25px;
+    }  
+
+    .login {
+        width: 600px;
+        height: 50px;
+    }
+
+    .blocktext {
+        gap: 20px;
+    } 
+
+    .text {
+        font-size: 22px;
+    } 
+
+    .bluetext {
+        font-size: 22px;
+    } 
+
+    .agriment {
+        font-size: 16px;
+        align-items: center;
+    }  
+
+    .modalContent {
+        width: 336px;
+        height: 250px;
+        font-size: 26px;
+    } 
+    
     .modalButton {
         width: 100px;
         height: 35px;
         font-size: 20px;
+    } 
+}
+
+@media screen and (max-width: 620px) {
+    .wrapperleft {
+        width: 400px;
+        justify-content: center;
+    }
+
+    .enterspace {
+        width: 400px;
+        justify-content: center;
+    }
+
+    .googlebutton {
+        width: 400px;
+        height: 40px;
+        background-size: 30px 30px;
+    }  
+
+    .login {
+        font-size: 16px;
+        width: 400px;
+        height: 40px;
+        justify-self: center
+    }  
+
+    .passwordContainer {
+        justify-content: center
+    }  
+
+    .blocktext {
+        gap: 10px;
+        justify-content: center;
+        justify-items: center;
+    } 
+
+    .text {
+        font-size: 18px;
+        height: 25px;
+    } 
+
+    .bluetext {
+        font-size: 18px;
+        height: 25px;
+    } 
+
+    .textbotton {
+        align-items: center;
+        flex-direction: column;
+        justify-content: normal;
+    }  
+
+    .agriment {
+        font-size: 14px;
+    }  
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 28px;
+        line-height: 30px;
+        height: 30px;
+    }
+
+    .description {
+        font-size: 20px;
+        line-height: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .googlebutton {
+        background-size: 25px 25px;
+        width: 300px;
+        height: 35px;
+    }  
+
+    .title {
+        font-size: 22px;
+    }
+
+    .login {
+        font-size: 16px;
+        width: 300px;
+        height: 35px;
+        justify-self: center
     }  
 }
