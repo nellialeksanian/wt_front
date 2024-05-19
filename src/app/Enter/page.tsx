@@ -19,9 +19,9 @@ function Enter() {
     const handleLogin = async () => {
     try {
         const formData = {
-        username: username,
-        email: email,
-        password: password,
+            username: username,
+            email: email,
+            password: password,
         };
     
         const response = await fetch('http://127.0.0.1:7777/api/auth/login', {
@@ -35,13 +35,13 @@ function Enter() {
         });
     
         if (!response.ok) {
-        throw new Error('Registration failed');
+            throw new Error('Registration failed');
         }
         
         const responseData = await response.json();
         console.log('Login successfully:', responseData);   //переход на страницу
 
-        Cookies.set('jwt', responseData.token, { expires: 7 }); // 7 дней хранения
+        Cookies.set('token', responseData.token, { expires: 7 }); // 7 дней хранения
         Cookies.set('userId', responseData.id, { expires: 7 });
 
         setShowSuccessModal(true);

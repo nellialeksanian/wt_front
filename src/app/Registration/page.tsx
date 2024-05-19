@@ -46,7 +46,7 @@ function Registration() {
           const responseData = await response.json();
           console.log('Registration successful:', responseData);
 
-          Cookies.set('jwt', responseData.token, { expires: 7 }); // 7 дней хранения
+          Cookies.set('token', responseData.token, { expires: 7 }); // 7 дней хранения
           Cookies.set('userId', responseData.id, { expires: 7 }); // 7 дней хранения
 
           setShowSuccessModal(true);
