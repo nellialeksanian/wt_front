@@ -46,7 +46,7 @@ function Header() {
               <Link href="/#AIvoice">Голос ИИ</Link>
             </div>
             <div className={styles.menuListItem} onClick={closeMenu}>
-              <Link href="/">Войти</Link>
+              <Link href="/Enter">Войти</Link>
             </div>
             <div className={styles.menuListItem} onClick={closeMenu}>
               <Link href="/Account">Личный кабинет</Link>

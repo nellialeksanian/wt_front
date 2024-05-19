@@ -15,10 +15,10 @@ export default function Footer() {
         </div>
         <div className={styles.group}>
           <div className={styles.text}>
-            <Link href="#AboutUs">О нас</Link>
+            <Link href="/#AboutUs">О нас</Link>
           </div>
           <div className={styles.text}>
-            <Link href="#AIvoice">Голос ИИ</Link>
+            <Link href="/#AIvoice">Голос ИИ</Link>
           </div>
         </div>
         <div className={styles.text1}>Все права защищены</div>

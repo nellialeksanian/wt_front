@@ -4,7 +4,6 @@
   position: sticky;
   display: block;
   height: 2080px;
-  z-index: 10;
   margin-top: 0;
   background-color: $black-color;
   padding-left: 250px;
@@ -121,6 +120,7 @@
   border-style:hidden;
   outline:none;
   align-items:center;
+  cursor: pointer;
 }
 
 .menu{
@@ -302,6 +302,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  cursor: pointer;
 }
 
 

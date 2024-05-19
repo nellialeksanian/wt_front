@@ -2,7 +2,8 @@
 import React, {useState} from 'react';
 import styles from './enter.module.scss'
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import Cookies from 'js-cookie';
 
 function Enter() {
     const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +40,10 @@ function Enter() {
         
         const responseData = await response.json();
         console.log('Login successfully:', responseData);   //переход на страницу
+
+        Cookies.set('jwt', responseData.token, { expires: 7 }); // 7 дней хранения
+        Cookies.set('userId', responseData.id, { expires: 7 });
+
         setShowSuccessModal(true);
     } catch (error) {
         console.error('Login error:', error);
@@ -83,7 +88,8 @@ function Enter() {
                                 <Link href="#">Забыли пароль?</Link>
                             </div>
                         </div>
-                        <button onClick={handleLogin} className={styles.enterbutton}> Вход</button>
+                        <button onClick={handleLogin} className={styles.enterbutton}> 
+                        <Link href="/Constructor">Вход</Link></button>
                     </div>
                     <div className={styles.textbotton}>
                         <div className={styles.text}>У вас есть учетная запись?</div>

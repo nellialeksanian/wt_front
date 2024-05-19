@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import styles from './registration.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import axios from 'axios';
+import Cookies from 'js-cookie';
 
 function Registration() {
     const [showPassword1, setShowPassword1] = useState(false);
@@ -35,7 +35,6 @@ function Registration() {
             headers: {
               'Content-Type': 'application/json',
               'Accept': '*/*',
-              'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(formData)
           });
@@ -46,7 +45,12 @@ function Registration() {
       
           const responseData = await response.json();
           console.log('Registration successful:', responseData);
+
+          Cookies.set('jwt', responseData.token, { expires: 7 }); // 7 дней хранения
+          Cookies.set('userId', responseData.id, { expires: 7 }); // 7 дней хранения
+
           setShowSuccessModal(true);
+
         } catch (error) {
           console.error('Registration error:', error);
         }
