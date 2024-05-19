@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Account.module.scss';
 import Cookies from 'js-cookie';
+import { cookies } from 'next/headers';
+import { useRouter } from 'next/router';
 
 function Account() {
     const [userData, setUserData] = useState({
@@ -15,7 +17,7 @@ function Account() {
     useEffect(() => {
         const fetchUserData = async () => {
             const token = Cookies.get('token');
-            console.log('Token:', token); // Log the token to see if it's retrieved
+            console.log('Token:', token); 
 
             if (token) {
                 try {
@@ -25,11 +27,11 @@ function Account() {
                             'Authorization': `Bearer ${token}`
                         }
                     });
-                    console.log('Response status:', response.status); // Log the response status
+                    console.log('Response status:', response.status); 
 
                     if (response.ok) {
                         const data = await response.json();
-                        console.log('Fetched data:', data); // Log the fetched data
+                        console.log('Fetched data:', data); 
                         setUserData({
                             username: data.username,
                             email: data.email,
@@ -49,7 +51,12 @@ function Account() {
         fetchUserData();
     }, []);
 
-    
+    const handleLogout = (e) => {
+
+        e.preventDefault();
+        Cookies.remove('token');
+        Cookies.remove('userId');
+    };
 
     return (
         <main className={styles.account}>
@@ -72,7 +79,7 @@ function Account() {
                 <button className={styles.saveButton}>
                     <Link href='/Settings'>Настройки аккаунта</Link>
                 </button>
-                <div className={styles.exit}>
+                <div onClick={handleLogout} className={styles.exit}>
                     <Link href="/">Выход</Link>
                 </div>
             </div>
