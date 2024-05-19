@@ -28,6 +28,6 @@
     "eslint-config-next": "14.2.3",
     "postcss-loader": "^8.1.1",
     "sass-loader": "^14.2.1",
-    "typescript": "^5"
+    "typescript": "5.4.5"
   }
 }
