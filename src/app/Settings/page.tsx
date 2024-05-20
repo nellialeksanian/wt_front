@@ -2,10 +2,84 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Settings.module.scss';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
+    
 function Settings() {
-        
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    const handleUpdateAccount = async () => {
+        const id = Cookies.get('userId');
+
+        const requestBody: { email?: string; username?: string } = {};
+        if (email) requestBody.email = email;
+        if (username) requestBody.username = username;
+
+        try {
+            const response = await fetch(`http://127.0.0.1:7777/api/user/${id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${Cookies.get('token')}`,
+                },
+                body: JSON.stringify(requestBody),
+            });
+
+            if (response.ok) {
+                console.log('Account information updated successfully');
+            } else {
+                console.error('Failed to update account information:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error updating account information:', error);
+        }
+    };
+
+    const handleChangePassword = async () => {
+        const id = Cookies.get('userId');
+    
+        if (!newPassword || !confirmPassword) {
+          console.error('Both passwords are required');
+          return;
+        }
+
+        if (newPassword !== confirmPassword) {
+            console.error('Passwords do not match');
+            return;
+        }
+
+        const requestBody = { password: newPassword };
+    
+        try {
+          const response = await fetch(`http://127.0.0.1:7777/api/user/${id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${Cookies.get('token')}`,
+            },
+            body: JSON.stringify(requestBody),
+          });
+    
+          if (response.ok) {
+            console.log('Password updated successfully');
+          } else {
+            console.error('Failed to update password');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+    };
+
+    const handleLogout = (e) => {
+
+        e.preventDefault();
+        Cookies.remove('token');
+        Cookies.remove('userId');
+    };
+   
     const [toggleState, setToggleState] = useState(1);
 
     const toggleTab = (index) => {
@@ -25,22 +99,42 @@ function Settings() {
                 <hr className={styles.solid}></hr>
                 <div className={styles.tabContent}>
                     <div className={toggleState === 1 ? styles.activeContent : styles.content}>
-                        <input className={styles.input} id="email" placeholder='Эл. адрес'></input>
-                        <input className={styles.input} id="username"placeholder='Имя пользователя'></input>
-                        <button className={styles.saveButton}>
-                            <Link href = '/'>Сохранить изменения</Link>
+                        <input className={styles.input} 
+                            id="email" 
+                            placeholder='Эл. адрес'
+                            value={email} 
+                            onChange={(e) => setEmail(e.target.value)}>
+                            </input>
+                        <input className={styles.input} 
+                            id="username" 
+                            value={username} 
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder='Имя пользователя'>
+                        </input>
+                        <button className={styles.saveButton} onClick={handleUpdateAccount}>
+                            <Link href = '#'>Сохранить изменения</Link>
                         </button>
-                        <div className={styles.exit}>
+                        <div className={styles.exit} onClick={handleLogout}>
                             <Link href="/">Выход</Link>
                         </div>
                     </div>
                     <div className={toggleState === 2 ? styles.activeContent : styles.content}>
-                        <input className={styles.input} id="old_pass" placeholder='Старый пароль'></input>
-                        <input className={styles.input} id="new_pass" placeholder='Новый пароль'></input>
-                        <button className={styles.saveButton}>
-                            <Link href = '/'>Сохранить изменения</Link>
+                        <input className={styles.input} 
+                            id="pass" 
+                            placeholder='Новый пароль'
+                            value={newPassword} 
+                            onChange={(e) => setNewPassword(e.target.value)}>
+                        </input>
+                        <input className={styles.input}
+                            id="pass2" 
+                            placeholder='Повторите пароль'
+                            value={confirmPassword} 
+                            onChange={(e) => setConfirmPassword(e.target.value)}>
+                        </input>
+                        <button className={styles.saveButton} onClick={handleChangePassword}>
+                            <Link href = '#'>Сохранить изменения</Link>
                         </button>
-                        <div className={styles.exit}>
+                        <div className={styles.exit} onClick={handleLogout}>
                             <Link href="/">Выход</Link>
                         </div>
                     </div>

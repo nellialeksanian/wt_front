@@ -32,7 +32,7 @@ function Constructor() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${Cookies.get('jwt')}`,
+          'Authorization': `Bearer ${Cookies.get('token')}`,
         },
         body: JSON.stringify(formData), // Отправляем текст и ID пользователя
       });
@@ -67,7 +67,7 @@ function Constructor() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${Cookies.get('jwt')}`, // Добавляем Authorization
+          'Authorization': `Bearer ${Cookies.get('token')}`, // Добавляем Authorization
         },
         body: JSON.stringify(formDataAudio), // Отправляем ID текста
       });
