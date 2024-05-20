@@ -73,7 +73,7 @@ function Account() {
                     <Link href='/Settings'>Настройки аккаунта</Link>
                 </button>
                 <div className={styles.exit}>
-                    <Link href="/">Выход</Link>
+                    <Link href="/Enter">Выход</Link>
                 </div>
             </div>
             <div className={styles.image}>

@@ -42,7 +42,7 @@ function AboutUs() {
                     <Link href="/" className={styles.like}>
                          <Image fill src="/assets/icons/like.svg" alt="like" />
                     </Link>
-                    <Link href="/" className={styles.comment}>
+                    <Link href="/Comments" className={styles.comment}>
                         <Image fill src="/assets/icons/comment.svg" alt="comment" />
                     </Link>
                 </div>
@@ -50,7 +50,7 @@ function AboutUs() {
                     <Link href="/" className={styles.like}>
                         <Image fill src="/assets/icons/like.svg" alt="like" />
                     </Link>
-                <Link href="/" className={styles.comment}>
+                <Link href="/Comments" className={styles.comment}>
                     <Image fill src="/assets/icons/comment.svg" alt="comment" />
                 </Link>
             </div>
@@ -58,7 +58,7 @@ function AboutUs() {
                 <Link href="/" className={styles.like}>
                     <Image fill src="/assets/icons/like.svg" alt="like" />
                 </Link>
-                <Link href="/" className={styles.comment}>
+                <Link href="/Comments" className={styles.comment}>
                     <Image fill src="/assets/icons/comment.svg" alt="comment" />
                 </Link>
             </div>
@@ -81,7 +81,7 @@ function AboutUs() {
                     <Link href="/" className={styles.like}>
                          <Image fill src="/assets/icons/like.svg" alt="like" />
                     </Link>
-                    <Link href="/" className={styles.comment}>
+                    <Link href="/Comments" className={styles.comment}>
                         <Image fill src="/assets/icons/comment.svg" alt="comment" />
                     </Link>
                 </div>
@@ -89,7 +89,7 @@ function AboutUs() {
                     <Link href="/" className={styles.like}>
                         <Image fill src="/assets/icons/like.svg" alt="like" />
                     </Link>
-                <Link href="/" className={styles.comment}>
+                <Link href="/Comments" className={styles.comment}>
                     <Image fill src="/assets/icons/comment.svg" alt="comment" />
                 </Link>
             </div>
@@ -97,7 +97,7 @@ function AboutUs() {
                 <Link href="/" className={styles.like}>
                     <Image fill src="/assets/icons/like.svg" alt="like" />
                 </Link>
-                <Link href="/" className={styles.comment}>
+                <Link href="/Comments" className={styles.comment}>
                     <Image fill src="/assets/icons/comment.svg" alt="comment" />
                 </Link>
             </div>
