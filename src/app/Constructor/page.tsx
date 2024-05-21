@@ -5,87 +5,80 @@ import styles from './constructor.module.scss';
 import Link from 'next/link';
 import Image from 'next/image'
 import Cookies from 'js-cookie';
+import { join } from 'path';
 
 function Constructor() {
   const [isOpen, setOpen] = useState(false);
-  const [text_markup, setText] = useState('');
-  const [audioId, setAudioId] = useState(''); // Состояние для ID аудио
-  const [audioUrl, setAudioUrl] = useState(''); // Состояние для URL аудио
   const userId = Cookies.get('userId'); 
+  const [textMarkup, setTextMarkup] = useState('');
+  const [audioSrc, setAudioSrc] = useState('');
 
-
-  const handleShowVoiceMenu = () => {
-    setOpen(!isOpen);
-  };
-
-  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value);
+  const handleTextChange = (e) => {
+    setTextMarkup(e.target.value);
   };
 
   const handleConvert = async () => {
     try {
-        const formData = {
-          text_markup: text_markup,
-          userId: userId,
-        };
-      const response = await fetch('http://127.0.0.1:7777/api/texts', {
+      const formData = { 
+        text_markup: textMarkup, 
+        userId: userId,
+      }
+      // Step 2: Send POST request to create text
+      const createTextResponse = await fetch('http://127.0.0.1:7777/api/texts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${Cookies.get('token')}`,
         },
-        body: JSON.stringify(formData), // Отправляем текст и ID пользователя
+        body: JSON.stringify(formData)
       });
+      const data = await createTextResponse.json();
+      const textId = data.id
 
-      if (!response.ok) {
-        throw new Error('Ошибка при сохранении текста');
+      // Step 3: Send POST request to generate audio
+      const formDataAudio = { 
+        textId: textId,
       }
-
-      const data = await response.json();
-      setAudioId(data.id); // Получаем ID из ответа сервера
-
-      // 2. Используем ID для генерации аудио
-      await generateAudio(data.id);
-
-      // 3. Обновляем состояние для отображения аудио
-      // (Допустим, что `generateAudio` устанавливает `audioUrl`)
-    } catch (error) {
-      console.error('Ошибка при конвертации:', error);
-      // Обработка ошибки: отобразить сообщение пользователю
-    }
-  };
-
-  const generateAudio = async (audioId: string) => {
-    // Здесь вызывается API для генерации аудио
-    try {
-
-      const formDataAudio = {
-        textId: audioId,
-      };
-
-      const response = await fetch('http://127.0.0.1:7777/api/audiofiles', {
+      const generateAudioResponse = await fetch('http://127.0.0.1:7777/api/audiofiles', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${Cookies.get('token')}`, // Добавляем Authorization
+          'Authorization': `Bearer ${Cookies.get('token')}`,
         },
-        body: JSON.stringify(formDataAudio), // Отправляем ID текста
+        body: JSON.stringify(formDataAudio),
       });
 
-      if (!response.ok) {
-        throw new Error('Ошибка при генерации аудио');
+      const audioData = await generateAudioResponse.json();
+      const audioId = audioData.id
+
+      // Step 4: Send GET request to get audio URL
+      const getAudioUrlResponse = await fetch(`http://127.0.0.1:7777/api/audiofiles/download/${audioId}`, {
+        headers: {
+          'Authorization': `Bearer ${Cookies.get('token')}`,
+        },
+      });
+      const blob = await getAudioUrlResponse.blob();
+      const audioUrl = URL.createObjectURL(blob);
+      const audioElement = document.getElementById('myAudio');
+      if (audioElement instanceof HTMLAudioElement && audioUrl) {
+        audioElement.src = audioUrl;
+      } else {
+        console.error('Failed to find audio element or audio URL is invalid.');
       }
+      console.log(audioUrl);
+      //setAudioSrc(audioUrl);
+    
 
-      const data = await response.json();
-      setAudioUrl(data.audioUrl); // Получаем URL аудио из ответа сервера
-
-      // Обработка успешной генерации аудио
-      console.log('Аудио успешно сгенерировано');
+      console.log(audioSrc);
     } catch (error) {
-      console.error('Ошибка при генерации аудио:', error);
-      // Обработка ошибки: отобразить сообщение пользователю
+      console.error('Error:', error);
     }
   };
+
+  const handleShowVoiceMenu = () => {
+    setOpen(!isOpen);
+  };
+
 
   return (
     <main className={styles.constructor}>
@@ -98,7 +91,7 @@ function Constructor() {
         </div>
       </nav>
       <div className={styles.input_space}>
-        <textarea className={styles.input_field} placeholder="text"  value={text_markup} onChange={ handleTextChange } />
+        <textarea className={styles.input_field} placeholder="text"  value={textMarkup} onChange={ handleTextChange } />
         <span className={styles.character_count}>10000/10000 символов</span>
       </div>
       <div className={styles.buttons}>
@@ -143,7 +136,7 @@ function Constructor() {
         </div>
       </div>
       <div className={styles.audioserch}>
-        <div className={styles.title}>Созданные аудизаписи</div>
+        <div className={styles.title}>Созданные аудиозаписи</div>
         <div className={styles.searchbar}>
           <input type="text" className={styles.searchfield} placeholder='audio'/>
           <Link href="/" className={styles.searchbutton}>
@@ -159,8 +152,8 @@ function Constructor() {
           <button className={styles.iconsgen}></button>
           </div>
           <div className={styles.wrapperbottom}>
-          <audio controls className={styles.customAudio}>
-            <source src={audioUrl} />
+          <audio id = 'myAudio' controls className={styles.customAudio}>
+            <source src="" type='type="audio/wav'></source>
           </audio>
           <button className={styles.iconsgen}></button>
           </div>

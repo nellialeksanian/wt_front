@@ -89,7 +89,8 @@ function Enter() {
                             </div>
                         </div>
                         <button onClick={handleLogin} className={styles.enterbutton}> 
-                        <Link href="/Constructor">Вход</Link></button>
+                            <Link href="/Constructor">Вход</Link>
+                        </button>
                     </div>
                     <div className={styles.textbotton}>
                         <div className={styles.text}>У вас есть учетная запись?</div>

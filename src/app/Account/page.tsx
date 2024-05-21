@@ -58,6 +58,15 @@ function Account() {
         Cookies.remove('userId');
     };
 
+    function formatDate(dateString: string): string {
+        const date = new Date(dateString);
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const year = date.getFullYear().toString();
+      
+        return `${day}/${month}/${year}`;
+    }
+
     return (
         <main className={styles.account}>
             <div className={styles.container}>
@@ -73,7 +82,7 @@ function Account() {
                     </div>
                     <div className={styles.containerSmall}>
                         <span className={styles.text2}>Дата регистрации</span>
-                        <span id='date' className={styles.text3}>{userData.registrationDate}</span>
+                        <span id='date' className={styles.text3}>{formatDate(userData.registrationDate)}</span>
                     </div>
                 </div>
                 <button className={styles.saveButton}>

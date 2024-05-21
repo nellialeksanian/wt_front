@@ -10,6 +10,7 @@ function Settings() {
     const [username, setUsername] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [showSuccessModal, setShowSuccessModal] = useState(false);
 
     const handleUpdateAccount = async () => {
         const id = Cookies.get('userId');
@@ -30,6 +31,9 @@ function Settings() {
 
             if (response.ok) {
                 console.log('Account information updated successfully');
+            
+                setShowSuccessModal(true);
+
             } else {
                 console.error('Failed to update account information:', response.statusText);
             }
@@ -65,6 +69,8 @@ function Settings() {
     
           if (response.ok) {
             console.log('Password updated successfully');
+            
+            setShowSuccessModal(true);
           } else {
             console.error('Failed to update password');
           }
@@ -78,6 +84,10 @@ function Settings() {
         e.preventDefault();
         Cookies.remove('token');
         Cookies.remove('userId');
+    };
+
+    const handleCloseModal = () => {
+        setShowSuccessModal(false)
     };
    
     const [toggleState, setToggleState] = useState(1);
@@ -112,7 +122,7 @@ function Settings() {
                             placeholder='Имя пользователя'>
                         </input>
                         <button className={styles.saveButton} onClick={handleUpdateAccount}>
-                            <Link href = '#'>Сохранить изменения</Link>
+                            Сохранить изменения
                         </button>
                         <div className={styles.exit} onClick={handleLogout}>
                             <Link href="/">Выход</Link>
@@ -132,7 +142,7 @@ function Settings() {
                             onChange={(e) => setConfirmPassword(e.target.value)}>
                         </input>
                         <button className={styles.saveButton} onClick={handleChangePassword}>
-                            <Link href = '#'>Сохранить изменения</Link>
+                            Сохранить изменения
                         </button>
                         <div className={styles.exit} onClick={handleLogout}>
                             <Link href="/">Выход</Link>
@@ -143,6 +153,17 @@ function Settings() {
             <div className={styles.image}>
                 <Image fill src="/assets/images/account_img.svg" alt="mic" /> 
             </div> 
+            {showSuccessModal && (
+                <div className={styles.successModal}> 
+                    <div className={styles.modalContent}>
+                        <p>Данные успешно изменены</p>
+                        <button onClick={handleCloseModal} className={styles.modalButton}>
+                            <Link href = '/Account'>Ok</Link>
+                        </button>
+                    </div>
+                </div>
+            )}
+            
         </main>
 
     )
