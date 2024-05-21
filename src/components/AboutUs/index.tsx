@@ -1,16 +1,31 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './AboutUs.module.scss';
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/navigation';
 
 function AboutUs() {
+    const token = Cookies.get('token');
+    const router = useRouter();
+  
+    const handleTryClick = () => {
+      if (token) {
+        router.push('/Constructor'); // Redirect to Constructor with token
+      } else {
+        // Redirect to login if no token
+        router.push('/Enter');
+      }
+    };
+
     return (
     <div className={`container ${styles.wrapper}`}>
         <div id="AboutUs" className={styles.block_1}> 
             <div className={styles.about_block}>
                 <span className = {styles.textbig}>Чтец</span>
                 <span className = {styles.textsmall}>Генерация аудиофайлов с помощью ИИ</span>
-                <button className={styles.tryButton}>
-                  <Link href = '/Constructor'>Попробовать бесплатно</Link>
+                <button className={styles.tryButton} onClick={handleTryClick}>
+                    Попробовать бесплатно{/* <Link href = '/Constructor'>Попробовать бесплатно</Link> */}
                 </button>
             </div>
             <div className={styles.image}>

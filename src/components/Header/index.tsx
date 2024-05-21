@@ -2,14 +2,50 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
+import { useRouter } from 'next/navigation';
 
 function Header() {
+  const [token, setToken] = useState(Cookies.get('token'));
+  const router = useRouter();
+
+  // Update token state whenever the cookies change
+  useEffect(() => {
+    const handleTokenChange = () => {
+      setToken(Cookies.get('token'));
+    };
+
+    // Set up an interval to check for token changes
+    const intervalId = setInterval(handleTokenChange, 1000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
   const [isOpen, setOpen] = useState(false)
   const closeMenu = () => {
     setOpen(false);
   };
-  
+
+  const handleTryClick = async () => {
+    const freshToken = Cookies.get('token');
+    if (freshToken) {
+      await router.push('/Constructor');
+    } else {
+      await router.push('/Enter');
+    }
+  };
+
+  const handleAccountClick = async () =>{
+    const freshToken = Cookies.get('token');
+    if (freshToken) {
+      await router.push('/Account');
+    } else {
+      await router.push('/Enter');
+    }
+  }
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.wrapper}`}>
@@ -26,12 +62,11 @@ function Header() {
               </div>
           </div>
         </nav>
-        <Link href="/Enter" className={styles.person}>
-        {/* <Link href="/Account" className={styles.person}> */}
+        <div className={styles.person} onClick={handleAccountClick}>
           <Image fill src="/assets/icons/person.svg" alt="person" />
-        </Link>
-        <button className={styles.tryButton}>
-          <Link href = "/Constructor">Попробовать сейчас</Link>
+        </div>
+        <button className={styles.tryButton} onClick={handleTryClick}>
+          Попробовать сейчаc
         </button>
         <button className={styles.menuIcon} onClick={() => setOpen(!isOpen)}>
           <Image  fill src="/assets/icons/menu.svg" alt="menu"/>
@@ -49,7 +84,7 @@ function Header() {
               <Link href="/Enter">Войти</Link>
             </div>
             <div className={styles.menuListItem} onClick={closeMenu}>
-              <Link href="/Account">Личный кабинет</Link>
+              <span onClick={handleAccountClick}>Личный кабинет</span>
             </div>
           </div>
           <button className={styles.tryButtonMenu} onClick={closeMenu}>
