@@ -29,7 +29,7 @@ function Enter() {
         headers: {
             'Content-Type': 'application/json',
             'Accept': '*/*',
-            'Access-Control-Allow-Origin': '*'
+            // 'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify(formData)
         });
