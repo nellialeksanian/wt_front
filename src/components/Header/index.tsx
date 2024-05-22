@@ -55,10 +55,10 @@ function Header() {
         <nav className={styles.nav}>
           <div className={styles.navList}>
               <div className={styles.navListItem}>
-                <Link href="#AboutUs">О нас</Link>
+                <Link href="/#AboutUs">О нас</Link>
               </div>
               <div className={styles.navListItem}>
-                <Link href="#AIvoice">Голос ИИ</Link>
+                <Link href="/#AIvoice">Голос ИИ</Link>
               </div>
           </div>
         </nav>
