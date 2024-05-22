@@ -30,7 +30,7 @@ function Registration() {
             password: password,
           };
       
-          const response = await fetch('http://127.0.0.1:7777/api/auth/register', {
+          const response = await fetch('http://178.154.206.159:5555/api/auth/register', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

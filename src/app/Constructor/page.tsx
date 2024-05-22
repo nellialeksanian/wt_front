@@ -5,7 +5,6 @@ import styles from './constructor.module.scss';
 import Link from 'next/link';
 import Image from 'next/image'
 import Cookies from 'js-cookie';
-import { join } from 'path';
 
 function Constructor() {
   const [isOpen, setOpen] = useState(false);
@@ -29,7 +28,7 @@ function Constructor() {
       };
 
       // Step 2: Send POST request to create text
-      const createTextResponse = await fetch('http://127.0.0.1:7777/api/texts', {
+      const createTextResponse = await fetch('http://178.154.206.159:5555/api/texts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +43,7 @@ function Constructor() {
       const formDataAudio = {
         textId: textId,
       };
-      const generateAudioResponse = await fetch('http://127.0.0.1:7777/api/audiofiles', {
+      const generateAudioResponse = await fetch('http://178.154.206.159:5555/api/audiofiles', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,7 +57,7 @@ function Constructor() {
       setAudioId(audioId);
 
       // Step 4: Send GET request to get audio URL
-      const getAudioUrlResponse = await fetch(`http://127.0.0.1:7777/api/audiofiles/download/${audioId}`, {
+      const getAudioUrlResponse = await fetch(`http://178.154.206.159:5555/api/audiofiles/download/${audioId}`, {
         headers: {
           'Authorization': `Bearer ${Cookies.get('token')}`,
         },
@@ -94,7 +93,7 @@ function Constructor() {
     try {
       // Отправляем запрос DELETE на сервер (получаем audioId из audioSrc[index])
       const name = audioSrc[index]; // Предполагаем, что audioId хранится в audioSrc
-      const deleteResponse = await fetch(`http://127.0.0.1:7777/api/audiofiles/delite/${audioId}`, {
+      const deleteResponse = await fetch(`http://178.154.206.159:5555/api/audiofiles/delite/${audioId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${Cookies.get('token')}`,

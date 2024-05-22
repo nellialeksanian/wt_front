@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import styles from './comments.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-import Cookies from 'js-cookie';
 //marckup выводить
 function Comments() {
     return (

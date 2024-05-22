@@ -4,8 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Account.module.scss';
 import Cookies from 'js-cookie';
-import { cookies } from 'next/headers';
-import { useRouter } from 'next/router';
 
 function Account() {
     const [userData, setUserData] = useState({
@@ -21,7 +19,7 @@ function Account() {
 
             if (token) {
                 try {
-                    const response = await fetch('http://127.0.0.1:7777/api/user/me', {
+                    const response = await fetch('http://178.154.206.159:5555/api/user/me', {
                         headers: {
                             'Accept': 'application/json',
                             'Authorization': `Bearer ${token}`

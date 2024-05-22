@@ -24,7 +24,7 @@ function Enter() {
             password: password,
         };
     
-        const response = await fetch('http://127.0.0.1:7777/api/auth/login', {
+        const response = await fetch('http://178.154.206.159:5555/api/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -64,14 +64,14 @@ function Enter() {
                                 <div className={styles.description}>Введите данные</div>
                                 <button className={styles.googlebutton}></button>
                             </div>
-                                <input type="text" className={styles.login} placeholder='Nickname' value={username} onChange={(e) => setUsername(e.target.value)}/>
-                                <input type="text" className={styles.login} placeholder='Эл. адрес' value={email}
+                                <input type="text" className={styles.login} placeholder='Expert' value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                                <input type="text" className={styles.login} placeholder='expert@mail.ru' value={email}
                                     onChange={(e) => setEmail(e.target.value)}/>
                                 <div className={styles.passwordContainer}> 
                                         <input
                                             type={showPassword ? "text" : "password"}
                                             className={styles.login}
-                                            placeholder="Пароль"
+                                            placeholder="12345678"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                         />

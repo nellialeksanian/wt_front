@@ -20,7 +20,7 @@ function Settings() {
         if (username) requestBody.username = username;
 
         try {
-            const response = await fetch(`http://127.0.0.1:7777/api/user/${id}`, {
+            const response = await fetch(`http://178.154.206.159:5555/api/user/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ function Settings() {
         const requestBody = { password: newPassword };
     
         try {
-          const response = await fetch(`http://127.0.0.1:7777/api/user/${id}`, {
+          const response = await fetch(`http://178.154.206.159:5555/api/user/${id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
