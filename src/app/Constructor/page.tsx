@@ -14,6 +14,7 @@ function Constructor() {
   const [audioSrc, setAudioSrc] = useState([]); // Массив для хранения URL аудиофайлов
   const audioElements = useRef<HTMLAudioElement[]>([]); // Массив для хранения элементов <audio>
   const [loading, setLoading] = useState(false);
+  // const audioElements = useRef([]); // Сохраняем ссылки на элементы <audio>
 
   const handleTextChange = (e) => {
     setTextMarkup(e.target.value);

@@ -43,13 +43,13 @@ function AboutUs() {
             <div className={styles.audioWrapper}>
             <div className={styles.audioList}>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/d1e57e2a-0dd4-4ae0-a7e7-6ec6df9ca3d8.wav'></source>
                 </audio>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/audio_10_1711464174489.wav'></source>
                 </audio>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/ea428496-313d-4c9e-ad55-1dfe62e709e6.wav'></source>
                 </audio>
             </div>
             <div className={styles.like_comment_list}>
@@ -82,13 +82,13 @@ function AboutUs() {
             <div className={styles.audioWrapper}>
             <div className={styles.audioList}>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/cfbd36e7-7c83-4a62-8ea7-ed59382cf542 (2).wav'></source>
                 </audio>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/audio_11_1711524730787.wav'></source>
                 </audio>
                 <audio controls className={styles.customAudio}>
-                    <source src='/assets/audio/audio_1.mp3'></source>
+                    <source src='assets/audio/audio1.wav'></source>
                 </audio>
             </div>
             <div className={styles.like_comment_list}>
