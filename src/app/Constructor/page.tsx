@@ -14,12 +14,14 @@ function Constructor() {
   const [audioId, setAudioId] = useState();
   const [audioSrc, setAudioSrc] = useState([]); // Массив для хранения URL аудиофайлов
   const audioElements = useRef<HTMLAudioElement[]>([]); // Массив для хранения элементов <audio>
+  const [loading, setLoading] = useState(false);
 
   const handleTextChange = (e) => {
     setTextMarkup(e.target.value);
   };
 
   const handleConvert = async () => {
+    setLoading(true);
     try {
       const formData = {
         text_markup: textMarkup,
@@ -78,6 +80,9 @@ function Constructor() {
       audioElements.current.push(newAudioElement);
     } catch (error) {
       console.error('Error:', error);
+    }
+    finally {
+      setLoading(false); // Завершение загрузки
     }
   };
 
@@ -160,8 +165,8 @@ function Constructor() {
           </nav>
         </div>
         <div className={styles.wrapperright}>
-          <button className={styles.Button2} onClick={handleConvert}>
-            Конвертировать
+          <button className={styles.Button2} onClick={handleConvert} disabled={loading}>
+            {loading ? 'Конвертируется...' : 'Конвертировать'}
           </button>
           <div className={styles.gentext}>
             Количество бесплатных попыток ограничено: 10 генераций в день
