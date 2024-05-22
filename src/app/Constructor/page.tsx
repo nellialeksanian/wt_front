@@ -74,9 +74,6 @@ function Constructor() {
       newAudioElement.controls = true;
       newAudioElement.className = styles.customAudio;
 
-      // Добавляем новый элемент в DOM
-      document.body.appendChild(newAudioElement);
-
       // Сохраняем ссылку на новый элемент
       audioElements.current.push(newAudioElement);
     } catch (error) {
